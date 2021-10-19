@@ -1,7 +1,7 @@
 
-# ThreeFold Website www_examplesite 
+# Uhuru.me Website
 
-## Examplesite is there to be replicated (copied) - !!! DO NOT EDIT EXAMPLESITE !!!
+## Based on Threefold example template 
 
 ### how to get started
 
@@ -9,7 +9,5 @@ see [getting started doc](https://github.com/threefoldfoundation/www_examplesite
 
 ### contribute
 
-see [best practices](https://github.com/threefoldfoundation/www_examplesite/blob/development/manual/contribute.md)
 
-> please make sure you work in line with instructions above
 
