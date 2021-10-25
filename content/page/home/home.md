@@ -11,5 +11,6 @@ header_altImg: threefold
 header_excerpt: The world's most advanced and fully decentralized peer-to-peer cloud infrastructure is now ready to host the world's data and workloads.
 button: Get Involved
 link: /grid
-brandPanel: fix_internet
+brandPanel: brandPanel
+brandPanel2: brandPanel2
 ---

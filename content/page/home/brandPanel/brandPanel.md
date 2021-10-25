@@ -1,5 +1,5 @@
 ---
-id: fix_internet
+id: brandPanel
 title: Switch on your
 subtitle: Autonomous Community
 sourceUrl: '#'

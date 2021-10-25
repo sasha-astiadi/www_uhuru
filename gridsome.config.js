@@ -20,6 +20,14 @@ module.exports = {
             }
         },
 
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'BrandPanel2',
+                path: './content/page/**/brandPanel2/*.md',
+            }
+        },
+
 
         {
             use: '@gridsome/source-filesystem',
@@ -28,6 +36,7 @@ module.exports = {
                 path: './content/page/*/*.md',
                 refs: {
                     brandPanel: 'BrandPanel',
+                    brandPanel2: 'BrandPanel2',
                 }
             }
         },

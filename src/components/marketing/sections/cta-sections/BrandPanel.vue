@@ -2,8 +2,8 @@
   <div class="mx-auto mt-10">
     <!-- home -->
     <div
-      v-if="id == 'home' && brand1"
-      class="flex flex-wrap lg:text-left text-center lg:pt-16 lg:px-16"
+      v-if="id == 'home' && brand1 && !brand2"
+      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16"
     >
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
         <g-image
@@ -48,6 +48,78 @@
       </div>
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
+      </div>
+    </div>
+
+    <div
+      v-else-if="id == 'home' && brand2"
+      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16"
+    >
+      <div class="lg:w-1/2 lg:px-6 self-center">
+        <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
+      </div>
+      <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
+        <div class="text-white max-w-lg">
+          <h5 class="h5 leading-none font-heading font-bold max-w-sm">
+            {{ brand.title }}
+          </h5>
+          <p class="font-light text-2xl mb-5">{{ brand.content1 }}</p>
+          <p class="font-light text-2xl">{{ brand.content2 }}</p>
+          <div class="my-10">
+            <a
+              v-if="brand.btnTxt.includes('http')"
+              target="_blank"
+              :href="brand.sourceUrl"
+              class="
+                bg-transparent
+                hover:bg-green
+                text-white
+                font-semibold
+                hover:text-white
+                py-4
+                px-10
+                border border-white
+                rounded-full
+              "
+              >{{ brand.btnTxt }}</a
+            >
+            <a
+              v-else
+              :href="brand.sourceUrl"
+              class="
+                bg-transparent
+                hover:bg-green
+                text-white
+                font-semibold
+                hover:text-white
+                py-4
+                px-10
+                border border-white
+                rounded-full
+              "
+              >{{ brand.btnTxt }}</a
+            >
+          </div>
+
+          <h5 class="h5 leading-none font-heading font-bold max-w-sm">
+            {{ brand.title2 }}
+          </h5>
+          <div
+            class="
+              pb-6
+              leading-tight
+              tracking-wide
+              max-w-md
+              font-light
+              text-2xl
+              mb-5
+            "
+            v-html="brand.content"
+          ></div>
+          <h5 class="h5 leading-none font-heading font-bold max-w-sm">
+            {{ brand.title3 }}
+          </h5>
+        </div>
       </div>
     </div>
 
@@ -114,7 +186,7 @@
 
 <script>
 export default {
-  props: ["brand", "id", "brand1", "brandPanel3"],
+  props: ["brand", "id", "brand1", "brand2"],
   computed: {
     image() {
       return this.brand.image.src
@@ -124,11 +196,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.bg-about {
-  background: #70dfc9;
-  background: -webkit-linear-gradient(to right, #70dfc9, #ea1ff7);
-  background: linear-gradient(to right, #70dfc9, #ea1ff7);
-}
-</style>

@@ -7,6 +7,13 @@
         v-if="$page.markdownPage.brandPanel"
         :brand1="true"
       />
+
+      <BrandPanel
+        :brand="$page.markdownPage.brandPanel2"
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.brandPanel2"
+        :brand2="true"
+      />
     </div>
   </Layout>
 </template>
@@ -34,10 +41,20 @@
          content
          sourceUrl
          btnTxt
-         button2
-         link2
          image
          subImg
+       }
+       brandPanel2{
+         id
+         title
+         content1
+         content2
+         title2
+         title3
+         content
+         sourceUrl
+         btnTxt
+         image
        }
   }
 }
