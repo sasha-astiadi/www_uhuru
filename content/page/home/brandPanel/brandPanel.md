@@ -4,7 +4,7 @@ title: Switch on your
 subtitle: Autonomous Community
 sourceUrl: '#'
 btnTxt: Learn more
-image: hand.png # src/assets/brandPanel/..
+image: home-hand.jpg # src/assets/brandPanel/..
 subImg: switcher-img.png
 ---
 

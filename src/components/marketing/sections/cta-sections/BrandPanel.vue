@@ -1,11 +1,12 @@
 <template>
   <div class="mx-auto mt-10">
+    
     <!-- home -->
     <div
       v-if="id == 'home' && brand1 && !brand2"
-      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16"
+      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40"
     >
-      <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
+      <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
         <g-image
           :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg}`)"
           class="w-1/4"
@@ -16,7 +17,7 @@
               h2
               lg:text-6xl
               leading-none
-              font-heading font-light
+              font-thin
               text-white
             "
           >
@@ -30,13 +31,13 @@
               v-if="brand.btnTxt.includes('http')"
               target="_blank"
               :href="brand.sourceUrl"
-              class="bg-green text-black font-bold py-4 px-10 rounded-full"
+              class="bg-transparent hover:bg-green-400 text-white font-extrabold hover:text-white py-1 text-2xl px-10 border border-white hover:border-transparent rounded-full"
               >{{ brand.btnTxt }}</a
             >
             <a
               v-else
               :href="brand.sourceUrl"
-              class="bg-green text-black font-bold py-4 px-10 rounded-full"
+              class="bg-transparent hover:bg-green-400 text-white font-extrabold hover:text-white py-1 text-2xl px-10 border border-white hover:border-transparent rounded-full"
               >{{ brand.btnTxt }}</a
             >
           </div>
@@ -47,7 +48,7 @@
         </div>
       </div>
       <div class="lg:w-1/2 lg:px-6 self-center">
-        <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
+        <g-image class="w-full mx-auto" :src="image" :alt="brand.title" />
       </div>
     </div>
 

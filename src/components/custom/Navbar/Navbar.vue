@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed inset-0 h-20 bg-black">
+  <div class="fixed inset-0 h-20 mx-10 bg-black">
     <header
       class="
         inline-flex
@@ -432,7 +432,7 @@ a.active--exact.active {
   width: auto;
 }
 .logo {
-  max-width: 80px;
+  max-width: 150px;
 }
 @media (max-width: 768px) {
   .navbar {
