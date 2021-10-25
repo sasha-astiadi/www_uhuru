@@ -30,7 +30,7 @@
 <page-query>
 
 query ($private: Int){
-  projects: allProject (filter: { private: { ne: $private }, tags: { id: {in: ["farming"]}}}){   
+  projects: allProject (filter: { private: { ne: $private }, tags: { id: {in: ["tech", "foundation"]}}}){   
     edges {
         node {
                 id
@@ -60,7 +60,7 @@ query ($private: Int){
     }
   }
 
-  people: allPerson(filter: { private: { ne: $private }, memberships: { id: {in: ["foundation", "tech"]}}}) {   
+  people: allPerson(filter: { private: { ne: $private }}) {   
      edges {
       node {
         id
@@ -69,11 +69,11 @@ query ($private: Int){
         content
         name
         rank
-         memberships{
-          id
-          title
-          path
-        }
+      #   memberships{
+      #    id
+      #    title
+      #    path
+      #  }
         bio
         linkedin
         websites

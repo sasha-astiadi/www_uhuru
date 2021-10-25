@@ -5,141 +5,12 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-    siteName: 'examplesite',
+    siteName: 'Uhuru',
+    siteUrl: 'https://uhuru.io',
+    pathPrefix: "threefold",
     plugins: [
 
         // Local models
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Card',
-                path: './content/page/**/cards/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Slide',
-                path: './content/page/**/sliders/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Contact',
-                path: './content/page/**/contactData/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'HowItWorks',
-                path: './content/page/**/how_it_works/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'HowItWorks_2',
-                path: './content/page/**/how_it_works_2/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Header',
-                path: './content/page/**/header/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Product',
-                path: './content/page/**/productData/**/*.md',
-            }
-        },
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'ProductTitle',
-                path: './content/page/**/productData/**/*.md',
-            }
-        },
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Features',
-                path: './content/page/**/features/**/*.md',
-            }
-        },
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Logo',
-                path: './content/page/**/logos/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Cta',
-                path: './content/page/**/cta/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'SignUp',
-                path: './content/page/**/signup/*.md',
-            }
-        },
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'About',
-                path: './content/about/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Comparison',
-                path: './content/page/**/comparison/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Roadmap',
-                path: './content/page/**/roadmap/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'PricingPlans',
-                path: './content/page/**/pricing_plans/**/*.md',
-            }
-        },
-
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Plans',
-                path: './content/page/**/withComparisonTable/**/*.md',
-            }
-        },
 
         {
             use: '@gridsome/source-filesystem',
@@ -149,13 +20,6 @@ module.exports = {
             }
         },
 
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'InTheNews',
-                path: './content/page/**/InTheNews/*.md',
-            }
-        },
 
         {
             use: '@gridsome/source-filesystem',
@@ -163,30 +27,7 @@ module.exports = {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
-                    cards: 'Card',
-                    slides: 'Slide',
-                    contactData: 'Contact',
-                    header: 'Header',
-                    howItWorks: 'HowItWorks',
-                    howItWorksMain: 'HowItWorks',
-                    productsMain: 'ProductTitle',
-                    productData: 'Product',
-                    featuresMain: 'Features',
-                    features: 'Features',
-                    logos: 'Logo',
-                    cta: 'Cta',
-                    signup: 'SignUp',
-                    comparisonMain: 'Comparison',
-                    comparisonSecs: 'Comparison',
-                    howItWorksMain_2: 'HowItWorks_2',
-                    howItWorks_2: 'HowItWorks_2',
-                    roadmap: 'Roadmap',
-                    pricing_plansMain: 'PricingPlans',
-                    pricingPlans: 'PricingPlans',
-                    plans: 'Plans',
-                    inTheNews: 'InTheNews',
                     brandPanel: 'BrandPanel',
-                    allSlides : 'About'
                 }
             }
         },
@@ -225,6 +66,7 @@ module.exports = {
                 },
             }
         },
+
         {
             use: '@gridsome/source-filesystem',
             options: {
@@ -250,7 +92,7 @@ module.exports = {
         },
 
         {
-             use: '@gridsome/source-filesystem',
+            use: '@gridsome/source-filesystem',
             options: {
                 typeName: 'News',
                 path: './content/news/**/*.md',
@@ -303,45 +145,13 @@ module.exports = {
                 shouldPurgeUnusedKeyframes: true,
             }
         },
-
-        // Full Text search
-        {
-            use: 'gridsome-plugin-flexsearch',
-            options: {
-                searchFields: ['title', 'name', 'content', 'status', 'linkedin', 'excerpt', 'cities', 'countries', 'websites'],
-                collections: [{
-                        typeName: 'Blog',
-                        indexName: 'Blog',
-                        fields: ['path']
-                    },
-
-                    {
-                        typeName: 'Project',
-                        indexName: 'Project',
-                        fields: ['path']
-                    },
-
-                    {
-                        typeName: 'Person',
-                        indexName: 'Person',
-                        fields: ['path']
-                    },
-
-                    {
-                        typeName: 'News',
-                        indexName: 'News',
-                        fields: ['path']
-                    },
-
-                    {
-                        typeName: 'MarkdownPage',
-                        indexName: 'MarkdownPage',
-                        fields: ['path']
-                    },
-
-                ]
-            }
-        },
+        // {
+        //     use: 'gridsome-plugin-matomo',
+        //     options: {
+        //         host: 'https://analytics.threefold.io',
+        //         siteId: 5
+        //     }
+        // }
     ],
     chainWebpack: config => {
         config.resolve.alias.set('@images', '@/assets/images')
@@ -369,7 +179,7 @@ module.exports = {
         }],
 
         Membership: [{
-            path: '/team/memberships/:id',
+            path: '/people/memberships/:id',
             component: '~/templates/Membership.vue'
         }],
 
@@ -384,11 +194,11 @@ module.exports = {
         }],
 
         Person: [{
-            path: '/team/:id',
+            path: '/people/:id',
             component: '~/templates/Person.vue'
         }],
         PersonTag: [{
-            path: '/team/tags/:id',
+            path: '/people/tags/:id',
             component: '~/templates/Tag.vue'
         }],
 
@@ -404,21 +214,23 @@ module.exports = {
             externalLinksTarget: '_blank',
             externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
             anchorClassName: 'icon icon-link',
+
+            pathPrefix: "threefold",
             plugins: [
                 ['gridsome-plugin-remark-prismjs-all', {
-                        highlightClassName: "gridsome-highlight",
-                        codeTitleClassName: "gridsome-code-title",
-                        classPrefix: 'language-',
-                        aliases: {},
-                        noInlineHighlight: false,
-                        showLineNumbers: false, //  `require("prismjs/plugins/line-numbers/prism-line-numbers.css");`
-                        languageExtensions: [],
-                        prompt: { //  `require("prismjs/plugins/command-line/prism-command-line.css");`
-                            user: `root`,
-                            host: `localhost`,
-                            global: false,
-                        }
-                    },
+                    highlightClassName: "gridsome-highlight",
+                    codeTitleClassName: "gridsome-code-title",
+                    classPrefix: 'language-',
+                    aliases: {},
+                    noInlineHighlight: false,
+                    showLineNumbers: false, //  `require("prismjs/plugins/line-numbers/prism-line-numbers.css");`
+                    languageExtensions: [],
+                    prompt: { //  `require("prismjs/plugins/command-line/prism-command-line.css");`
+                        user: `root`,
+                        host: `localhost`,
+                        global: false,
+                    }
+                },
                     // '@noxify/gridsome-remark-table-align', ['@noxify/gridsome-remark-classes', {
                     //     'table': 'table table-striped',
                     //     'tableCell[align=center]': 'text-center',

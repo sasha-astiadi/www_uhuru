@@ -1,15 +1,15 @@
 <template>
-  <div class="container mx-auto">
+  <div class="bg-black">
     <NavBar
       :navigation="$static.navigation"
       @setTheme="setTheme"
       :theme="this.theme"
     />
     <slot />
-    <Footer 
+    <!-- <Footer 
       :record="$static.footer"
       @setTheme="setTheme"
-      :theme="this.theme" />
+      :theme="this.theme" /> -->
   </div>
 </template>
 
@@ -41,17 +41,17 @@ query {
   }
 
   navigation(id: "navigation"){
-    navLinks{
-      name
-      link
-      external
-      expandable
-      submenu {
-        title
-        path
-        external
-      }
-    }
+  #  navLinks{
+  #    name
+  #    link
+  #    external
+  #    expandable
+  #    submenu {
+  #      title
+  #      path
+  #      external
+  #    }
+  #  }
     social{
       icon
       link
@@ -64,6 +64,7 @@ query {
       twitter
       dribbble
       instagram
+      telegram
       description
       items{
         title
@@ -77,8 +78,10 @@ query {
 </static-query>
 
 <style>
+
+
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: Futura Book font,
     "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   line-height: 1.5;
@@ -102,4 +105,5 @@ body {
 .nav__link {
   margin-left: 20px;
 }
+
 </style>
