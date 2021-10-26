@@ -1,158 +1,43 @@
 <template>
-  <section class="py-12 px-4 text-center" v-if="id == 'home'">
-    <h2 class="text-4xl leading-tight mb-6 font-bold font-heading uppercase">
+  <section class="py-24 px-4 text-center text-white" v-if="id == 'home'">
+    <h2
+      class="
+        h2
+        mx-auto
+        leading-tight
+        mb-6
+        font-bold font-heading
+        uppercase
+        lg:max-w-2xl
+      "
+    >
       {{ main.title }}
     </h2>
-    <div
-      v-if="main.content"
-      class="mb-6 text-gray-700"
-      v-html="main.content"
-    ></div>
-    <div class="flex flex-wrap items-center -mx-4 mb-6">
+
+    <h2
+      class="h2 mx-auto leading-tight mb-6 font-thin font-heading lg:max-w-2xl"
+    >
+      {{ main.subtitle }}
+    </h2>
+    <div class="flex flex-wrap items-center mx-auto lg:max-w-2xl">
       <div
         v-for="(feature, index) in features"
         :key="index"
         class="lg:w-1/3 mt-5 lg:mt-0 feature px-4 text-center"
       >
         <div v-if="index == 1">
-          <div class="w-1/2 lg:w-full lg:h-full mx-auto px-2 order-1">
-            <g-image :src="feature.svg" :alt="feature.title" />
+          <div class="w-full h-auto mx-auto px-2 order-1">
+            <g-image :src="feature.image" :alt="feature.title" />
           </div>
         </div>
 
-        <div v-else>
-          <span v-if="index !== 4" class="img-border"></span>
-          <h5 class="capitalize">
+        <div v-else class="max-w-xs mx-auto">
+          <h5 class="h5 text-3xl font-light">
             {{ feature.title }}
           </h5>
-          <div v-html="feature.content" class="text-gray-700"></div>
+          <div v-html="feature.content" class="lg:text-xl text-gray-800"></div>
         </div>
       </div>
-    </div>
-    <div class="mx-auto mt-20" v-if="main.btn">
-      <a
-        v-if="main.link.includes('http')"
-        class="
-          inline-block
-          bg-blue-900
-          text-sm
-          learn-button
-          hover:bg-blue-800
-          text-gray-100
-          px-12
-          py-2
-          mr-5
-          mb-4
-          shadow
-          rounded-full
-        "
-        :href="main.link"
-        target="_blank"
-        >{{ main.btn }}
-      </a>
-
-      <a
-        v-else
-        class="
-          inline-block
-          bg-blue-900
-          text-sm
-          learn-button
-          hover:bg-blue-800
-          text-gray-100
-          px-12
-          py-2
-          mr-5
-          mb-4
-          shadow
-          rounded-full
-        "
-        :href="main.link"
-        >{{ main.btn }}
-      </a>
-
-      <a
-        v-if="main.link2.includes('http')"
-        class="
-          inline-block
-          bg-blue-900
-          text-sm
-          learn-button
-          hover:bg-blue-800
-          text-gray-100
-          px-12
-          py-2
-          mr-5
-          mb-4
-          shadow
-          rounded-full
-        "
-        :href="main.link2"
-        target="_blank"
-        >{{ main.btn2 }}
-      </a>
-
-      <a
-        v-else
-        class="
-          inline-block
-          bg-blue-900
-          text-sm
-          learn-button
-          hover:bg-blue-800
-          text-gray-100
-          px-12
-          py-2
-          mr-5
-          mb-4
-          shadow
-          rounded-full
-        "
-        :href="main.link2"
-        >{{ main.btn2 }}
-      </a>
-
-      <a
-        v-if="main.link3.includes('http')"
-        class="
-          inline-block
-          bg-blue-900
-          text-sm
-          learn-button
-          hover:bg-blue-800
-          text-gray-100
-          px-12
-          py-2
-          mr-5
-          mb-4
-          shadow
-          rounded-full
-        "
-        :href="main.link3"
-        target="_blank"
-        >{{ main.btn3 }}
-      </a>
-
-      <a
-        v-else
-        class="
-          inline-block
-          bg-blue-900
-          text-sm
-          learn-button
-          hover:bg-blue-800
-          text-gray-100
-          px-12
-          py-2
-          mr-5
-          mb-4
-          shadow
-          rounded-full
-        "
-        :href="main.link3"
-        >{{ main.btn3 }}
-      </a>
-      <!-- <div v-html="main.content" class="text-sm text-gray-400 mt-5"></div> -->
     </div>
   </section>
 
@@ -405,6 +290,9 @@
 <script>
 export default {
   props: ["id", "main", "features"],
+  mounted() {
+    console.log(this.main);
+  },
 };
 </script>
 

@@ -28,6 +28,20 @@
         v-if="$page.markdownPage.brandPanel4"
         :brand4="true"
       />
+
+      <Features
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.suites.length > 0"
+        :main="$page.markdownPage.suiteMain"
+        :features="$page.markdownPage.suites"
+      />
+
+      <ShowcaseProductsHome
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.productivity.length > 0"
+        :main="$page.markdownPage.productivityMain"
+        :products="$page.markdownPage.productivity"
+      />
     </div>
   </Layout>
 </template>
@@ -78,6 +92,27 @@
          content
          image
        }
+      productivityMain{
+         id
+         title
+     }
+     productivity{
+        id
+        title
+        image
+        content
+     }
+    suiteMain{
+       id
+       title
+       subtitle
+     }
+     suites{
+       id
+       title
+       image
+       content
+     }
   }
 }
 </page-query>
@@ -91,10 +126,14 @@
 </static-query>
 <script>
 import BrandPanel from "~/components/marketing/sections/cta-sections/BrandPanel.vue";
+import ShowcaseProductsHome from "~/components/marketing/sections/cta-sections/ShowcaseProductsHome.vue";
+import Features from "~/components/custom/sections/Features.vue";
 
 export default {
   components: {
     BrandPanel,
+    ShowcaseProductsHome,
+    Features,
   },
   computed: {
     getImg() {

@@ -47,6 +47,36 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'ProductivityMain',
+                path: './content/page/**/productivity/main/*.md',
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Productivity',
+                path: './content/page/**/productivity/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'SuiteMain',
+                path: './content/page/**/suite/main/*.md',
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Suites',
+                path: './content/page/**/suite/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -54,6 +84,10 @@ module.exports = {
                     brandPanel2: 'BrandPanel2',
                     brandPanel3: 'BrandPanel3',
                     brandPanel4: 'BrandPanel4',
+                    productivityMain: 'ProductivityMain',
+                    productivity: 'Productivity',
+                    suiteMain: 'SuiteMain',
+                    suites: 'Suites',
                 }
             }
         },

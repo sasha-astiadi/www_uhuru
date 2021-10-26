@@ -7,4 +7,8 @@ brandPanel: brandPanel
 brandPanel2: brandPanel2
 brandPanel3: brandPanel3
 brandPanel4: brandPanel4
+productivityMain: productivityMain
+productivity: [sec1, sec2, sec3, sec4, sec5]
+suiteMain: suiteMain
+suites: [nw1, nw2, nw3]
 ---
