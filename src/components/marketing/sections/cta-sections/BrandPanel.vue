@@ -66,8 +66,8 @@
           <h4 class="leading-none font-heading font-bold max-w-lg">
             {{ brand.title }}
           </h4>
-          <p class="font-light text-2xl mb-5">{{ brand.content1 }}</p>
-          <p class="font-light text-2xl">{{ brand.content2 }}</p>
+          <p class="font-light text-2xl leading-tight mb-5">{{ brand.content1 }}</p>
+          <p class="font-light leading-tight text-2xl">{{ brand.content2 }}</p>
           <div class="my-10">
             <a
               v-if="brand.btnTxt.includes('http')"
