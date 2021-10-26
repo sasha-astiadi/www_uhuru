@@ -1,9 +1,8 @@
 <template>
   <div class="mx-auto mt-10">
-    
     <!-- home -->
     <div
-      v-if="id == 'home' && brand1 && !brand2"
+      v-if="id == 'home' && brand1 && !brand2 && !brand3 && !brand4"
       class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40"
     >
       <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
@@ -13,16 +12,10 @@
         />
         <div class="">
           <h2
-            class="
-              h2
-              lg:text-6xl
-              leading-none
-              font-thin
-              text-white
-            "
+            class="h2 lg:text-6xl leading-none font-thin text-white typewriter"
           >
             <span class="block">{{ brand.title }}</span>
-            <span class="block green" v-if="brand.subtitle">{{
+            <span class="block green typewriter-text" v-if="brand.subtitle">{{
               brand.subtitle
             }}</span>
           </h2>
@@ -31,13 +24,37 @@
               v-if="brand.btnTxt.includes('http')"
               target="_blank"
               :href="brand.sourceUrl"
-              class="bg-transparent hover:bg-green-400 text-white font-extrabold hover:text-white py-1 text-2xl px-10 border border-white hover:border-transparent rounded-full"
+              class="
+                bg-transparent
+                hover:bg-green-400
+                text-white
+                font-extrabold
+                hover:text-white
+                py-1
+                text-2xl
+                px-10
+                border border-white
+                hover:border-transparent
+                rounded-full
+              "
               >{{ brand.btnTxt }}</a
             >
             <a
               v-else
               :href="brand.sourceUrl"
-              class="bg-transparent hover:bg-green-400 text-white font-extrabold hover:text-white py-1 text-2xl px-10 border border-white hover:border-transparent rounded-full"
+              class="
+                bg-transparent
+                hover:bg-green-400
+                text-white
+                font-extrabold
+                hover:text-white
+                py-1
+                text-2xl
+                px-10
+                border border-white
+                hover:border-transparent
+                rounded-full
+              "
               >{{ brand.btnTxt }}</a
             >
           </div>
@@ -125,6 +142,74 @@
     </div>
 
     <div
+      v-else-if="id == 'home' && brand3"
+      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40"
+    >
+      <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
+        <div class="">
+          <h3 class="h3 leading-none font-bold green">
+            {{ brand.title }}
+          </h3>
+
+          <div
+            class="
+              pb-6
+              text-2xl
+              leading-tight
+              tracking-wide
+              max-w-md
+              font-light
+              text-white
+            "
+            v-html="brand.content"
+          ></div>
+
+          <!-- <g-image
+            :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg}`)"
+            class="w-1/4"
+          /> -->
+        </div>
+      </div>
+      <div class="lg:w-1/2 lg:px-6 self-center">
+        <g-image class="w-full mx-auto" :src="image" :alt="brand.title" />
+      </div>
+    </div>
+
+    <div
+      v-else-if="id == 'home' && brand4"
+      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16"
+    >
+      <div class="lg:w-1/2 lg:px-6 self-center">
+        <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
+      </div>
+      <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
+        <div class="text-white max-w-lg">
+          <h5 class="h5 leading-none font-heading font-bold max-w-sm">
+            {{ brand.title }}
+          </h5>
+
+          <h2
+            class="h2 lg:text-6xl leading-none font-heading font-thin max-w-sm"
+          >
+            {{ brand.subtitle }}
+          </h2>
+          <div
+            class="
+              pb-6
+              leading-tight
+              tracking-wide
+              max-w-md
+              font-light
+              text-2xl
+              mb-5
+            "
+            v-html="brand.content"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div
       v-else
       class="
         brandpanel
@@ -187,7 +272,7 @@
 
 <script>
 export default {
-  props: ["brand", "id", "brand1", "brand2"],
+  props: ["brand", "id", "brand1", "brand2", "brand3", "brand4"],
   computed: {
     image() {
       return this.brand.image.src
@@ -197,3 +282,37 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.typewriter {
+  display: inline-block;
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  border-right: 4px solid #81e0cd;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #81e0cd;
+  }
+}
+</style>

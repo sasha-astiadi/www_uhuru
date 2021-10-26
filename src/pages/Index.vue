@@ -14,6 +14,20 @@
         v-if="$page.markdownPage.brandPanel2"
         :brand2="true"
       />
+
+      <BrandPanel
+        :brand="$page.markdownPage.brandPanel3"
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.brandPanel3"
+        :brand3="true"
+      />
+
+      <BrandPanel
+        :brand="$page.markdownPage.brandPanel4"
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.brandPanel4"
+        :brand4="true"
+      />
     </div>
   </Layout>
 </template>
@@ -26,14 +40,6 @@
         metaTitle
         metaDesc
         metaImg
-        header_slogan
-        header_title
-        header_title2
-        header_image
-        header_excerpt
-        header_altImg
-        button
-        link
         brandPanel{
          id
          title
@@ -54,6 +60,22 @@
          content
          sourceUrl
          btnTxt
+         image
+       }
+      brandPanel3{
+         id
+         title
+         content
+         image
+         subImg
+         excerpt
+       }
+
+      brandPanel4{
+         id
+         title
+         subtitle
+         content
          image
        }
   }

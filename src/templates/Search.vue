@@ -108,8 +108,8 @@ query ($private: Int){
     edges{
       node{
         __typename
-        header_title
-        header_excerpt
+        # header_title
+        # header_excerpt
         path
       #  title
         excerpt

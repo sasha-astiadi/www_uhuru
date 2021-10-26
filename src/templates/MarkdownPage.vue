@@ -1,7 +1,7 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
     <div class="container-fluid sm:pxi-0 mx-auto overflow-x-hidden">
-      <Header
+      <!-- <Header
         v-if="
           $page.markdownPage.header_title &&
           $page.markdownPage.header_title != '' &&
@@ -15,7 +15,7 @@
         :excerpt="$page.markdownPage.header_excerpt"
         :button="$page.markdownPage.button"
         :link="$page.markdownPage.link"
-      />
+      /> -->
     </div>
     <div class="container_tft sm:pxi-0 mx-auto overflow-x-hidden py-5">
       <BrandPanel
@@ -318,18 +318,18 @@
   query($id: ID!) {
     markdownPage(id: $id) {
         id
-        path
-        excerpt
-        metaTitle
-        metaDesc
-        metaImg
-        header_excerpt
-        header_altImg
-        header_title
-        header_image
-        header_slogan
-        button
-        link
+      #  path
+      #  excerpt
+      #  metaTitle
+      #  metaDesc
+      #  metaImg
+      #  header_excerpt
+      #  header_altImg
+      #  header_title
+      #  header_image
+      #  header_slogan
+      #  button
+      #  link
     }
   }
 
