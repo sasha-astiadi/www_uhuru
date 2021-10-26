@@ -77,6 +77,20 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'BenefitsMain',
+                path: './content/page/**/benefits/main/*.md',
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Benefits',
+                path: './content/page/**/benefits/**/*.md',
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -88,6 +102,8 @@ module.exports = {
                     productivity: 'Productivity',
                     suiteMain: 'SuiteMain',
                     suites: 'Suites',
+                    benefitsMain: 'BenefitsMain',
+                    benefits: 'Benefits',
                 }
             }
         },

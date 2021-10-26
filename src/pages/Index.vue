@@ -42,6 +42,13 @@
         :main="$page.markdownPage.productivityMain"
         :products="$page.markdownPage.productivity"
       />
+
+      <Benefits
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.benefits.length > 0"
+        :main="$page.markdownPage.benefitsMain"
+        :benefits="$page.markdownPage.benefits"
+      />
     </div>
   </Layout>
 </template>
@@ -113,6 +120,18 @@
        image
        content
      }
+    benefitsMain{
+       id
+       title
+       content
+       button
+       link
+       background
+     }
+     benefits{
+       id
+       title
+     }
   }
 }
 </page-query>
@@ -128,12 +147,14 @@
 import BrandPanel from "~/components/marketing/sections/cta-sections/BrandPanel.vue";
 import ShowcaseProductsHome from "~/components/marketing/sections/cta-sections/ShowcaseProductsHome.vue";
 import Features from "~/components/custom/sections/Features.vue";
+import Benefits from "~/components/custom/Benefits.vue";
 
 export default {
   components: {
     BrandPanel,
     ShowcaseProductsHome,
     Features,
+    Benefits,
   },
   computed: {
     getImg() {
