@@ -16,7 +16,7 @@
           v-html="main.content"
         ></h2>
       </div>
-      <div class="lg:w-1/2 lg:px-2 order-2 lg:order-none lg:self-center">
+      <div class="lg:w-1/2 lg:px-2 order-2 lg:order-none lg:self-end">
         <dl
           class="
             space-y-10
