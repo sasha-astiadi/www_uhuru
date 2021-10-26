@@ -290,9 +290,6 @@
 <script>
 export default {
   props: ["id", "main", "features"],
-  mounted() {
-    console.log(this.main);
-  },
 };
 </script>
 

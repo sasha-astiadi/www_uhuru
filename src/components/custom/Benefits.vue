@@ -25,7 +25,7 @@
         >
           <div
             v-for="benefit in benefits"
-            :key="benefit"
+            :key="benefit.title"
             class="relative max-w-xs"
           >
             <dt>

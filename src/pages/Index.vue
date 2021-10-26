@@ -49,6 +49,13 @@
         :main="$page.markdownPage.benefitsMain"
         :benefits="$page.markdownPage.benefits"
       />
+
+      <Timeline
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.timeline.length > 0"
+        :main="$page.markdownPage.timelineMain"
+        :timeline="$page.markdownPage.timeline"
+      />
     </div>
   </Layout>
 </template>
@@ -132,6 +139,16 @@
        id
        title
      }
+     timelineMain {
+       id
+       title
+       image
+       content
+     }
+     timeline {
+       id
+       content
+     }
   }
 }
 </page-query>
@@ -148,13 +165,14 @@ import BrandPanel from "~/components/marketing/sections/cta-sections/BrandPanel.
 import ShowcaseProductsHome from "~/components/marketing/sections/cta-sections/ShowcaseProductsHome.vue";
 import Features from "~/components/custom/sections/Features.vue";
 import Benefits from "~/components/custom/Benefits.vue";
-
+import Timeline from "~/components/custom/Timeline.vue";
 export default {
   components: {
     BrandPanel,
     ShowcaseProductsHome,
     Features,
     Benefits,
+    Timeline,
   },
   computed: {
     getImg() {

@@ -88,6 +88,22 @@ module.exports = {
                 path: './content/page/**/benefits/**/*.md',
             }
         },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'TimelineMain',
+                path: './content/page/**/timeline/main/*.md',
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Timeline',
+                path: './content/page/**/timeline/**/*.md',
+            }
+        },
+
         {
             use: '@gridsome/source-filesystem',
             options: {
@@ -104,6 +120,8 @@ module.exports = {
                     suites: 'Suites',
                     benefitsMain: 'BenefitsMain',
                     benefits: 'Benefits',
+                    timelineMain: 'TimelineMain',
+                    timeline: 'Timeline'
                 }
             }
         },

@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed inset-0 h-20 mx-10 bg-black">
+  <div class="fixed inset-0 h-20 bg-black">
     <header
       class="
         inline-flex
@@ -8,7 +8,7 @@
         flex-wrap
         container-fluid
         mx-auto
-        py-10
+        p-5
         mb-10
         sm:px-0
         transition-all transition-500
