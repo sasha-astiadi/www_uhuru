@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed inset-0 h-20 bg-black">
+  <div class="fixed inset-0 h-20 bg">
     <header
       class="
         inline-flex
@@ -23,7 +23,7 @@
           <a href="/">
             <g-image
               :src="require(`!!assets-loader!@images/logo.png`)"
-              class="mr-3 fill-current logo"
+              class="lg:ml-10 mr-3 fill-current logo"
               alt=""
             />
 
@@ -284,7 +284,7 @@
             @keyup.enter="result"
           />
         </div> -->
-        <ul class="list-none inline-flex">
+        <ul class="list-none inline-flex mr-10">
           <!-- <li class="mr-0 sm:mr-2">
             <ThemeSwitcher v-on="$listeners" :theme="theme" />
           </li> -->
@@ -428,6 +428,11 @@ a.active--exact.active {
   border-radius: 0.5rem;
 }
 
+.bg {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #313035, #121214));
+  background: linear-gradient(to right, #313035, #121214);
+}
 .navbar {
   width: auto;
 }
