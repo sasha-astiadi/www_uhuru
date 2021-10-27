@@ -82,6 +82,7 @@
          btnTxt
          image
          subImg
+         subImg2
        }
        brandPanel2{
          id
