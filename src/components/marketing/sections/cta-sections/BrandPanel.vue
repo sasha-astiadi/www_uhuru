@@ -195,19 +195,19 @@
 
     <div
       v-else-if="id == 'home' && brand4"
-      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16 bg2"
+      class="flex flex-wrap lg:text-left text-center lg:px-16 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
-        <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
+        <g-image class="w-3/4 mx-auto mt-32 " :src="image" :alt="brand.title" />
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
-        <div class="text-white max-w-lg">
-          <h5 class="h5 leading-none font-heading font-bold max-w-sm">
+        <div class="text-white ">
+          <h5 class="h5 leading-none font-heading font-bold ">
             {{ brand.title }}
           </h5>
 
           <h2
-            class="h2 lg:text-6xl leading-none font-heading font-thin max-w-sm"
+            class="h2 text-8xl leading-none font-heading font-thin "
           >
             {{ brand.subtitle }}
           </h2>
@@ -216,7 +216,7 @@
               pb-6
               leading-tight
               tracking-wide
-              max-w-md
+              lg:max-w-2xl
               font-light
               text-2xl
               mb-5
