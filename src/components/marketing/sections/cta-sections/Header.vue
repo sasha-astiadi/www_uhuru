@@ -78,176 +78,52 @@
             :href="link"
             >{{ button }}</a
           >
-          
         </div>
       </div>
     </div>
 
     <div
       class="
+        lg:p-40
         flex flex-wrap
         text-center
         items-center
-        lg:text-left
-        lg:mb-10
-        lg:mt-4
+        lg:text-left lg:mb-10 lg:mt-4
         -mx-2
       "
-      v-if="id == 'mission'"
-    >
-      <div class="lg:w-1/2 px-2 lg:pr-10 lg:mt-10 order-1 lg:order-none">
-        <h1
-          
-          class="
-            text-center
-            uppercase
-            mb-6
-            mt-10
-            leading-none
-            text-8xl
-            font-heading
-          "
-        >
-          {{ title }}
-        </h1>
-        <div
-          class="
-            mb-8
-            px-10
-            text-center text-2xl text-extrabold
-            leading-tight
-            lg:max-w-2xl
-            mx-auto
-          "
-          v-html="excerpt"
-        ></div>
-        <div v-if="button" class="block text-center">
-          <a
-            v-if="link.includes('http')"
-            target="_blank"
-            class="
-              inline-block
-              bg-white
-              text-lg
-              learn-button
-              hover:bg-gray-400
-              bo
-              px-12
-              py-1
-              mr-5
-              mb-4
-              border-2
-              shadow
-              border-black
-            "
-            :href="link"
-            >{{ button }}</a
-          >
-          <a
-            v-else
-            class="
-              inline-block
-              bg-white
-              text-lg
-              learn-button
-              hover:bg-gray-400
-              bo
-              px-12
-              py-1
-              mr-5
-              mb-4
-              border-2
-              shadow
-              border-black
-            "
-            :href="link"
-            >{{ button }}</a
-          >
-          <!-- <a class="text-gray-600 hover:underline" href="#">Learn more</a> -->
-        </div>
-      </div>
-      <div class="lg:w-1/2 px-2"><g-image :src="img" :alt="altImg" /></div>
-    </div>
-
-    <!-- <div
-      v-else-if="id == 'tft'"
-      class="
-        flex flex-wrap
-        text-center
-        tft_section
-        lg:text-left
-        lg:mt-10
-        lg:py-10
-        -mx-2
-      "
+      v-else-if="id == 'stats'"
     >
       <div
         class="
           lg:w-1/2
           px-2
-          lg:pr-20
-          lg:mt-10
+          lg:pr-10 lg:mt-10
           order-1
-          lg:order-none
-          text-center
+          lg:order-none lg:self-center
         "
       >
-        <h1 class="text-8xl mb-6 mt-20 leading-none font-heading">
+        <h5 class="h5 text-white leading-none font-heading font-bold max-w-sm">
+          {{ slogan }}
+        </h5>
+        <h1 class="h1 text-white font-thin my-6 lg:text-7xl leading-tight font-heading">
           {{ title }}
         </h1>
+      </div>
+      <div class="lg:w-1/2 px-2 lg:self-center">
+        <g-image :src="img" class="w-3/4 mx-auto my-10" :alt="altImg" />
         <div
-          class="mb-8 text-gray-800 text-3xl tft_subtitle"
+          class="
+            text-white
+            mb-8
+            px-10
+            text-center text-2xl text-extrabold
+            leading-normal
+            mx-auto
+          "
           v-html="excerpt"
         ></div>
-        <div v-if="button">
-          <a
-            v-if="link.includes('http')"
-            target="_blank"
-            class="
-              inline-block
-              bg-gray-900
-              text-2xl
-              learn-button
-              hover:bg-gray-800
-              text-gray-100
-              px-16
-              py-1
-              mb-4
-              shadow
-              rounded-full
-              tft_subtitle
-              tracking-wide
-            "
-            :href="link"
-            >{{ button }}</a
-          >
-          <a
-            v-else
-            class="
-              inline-block
-              bg-gray-900
-              text-2xl
-              learn-button
-              hover:bg-gray-800
-              text-gray-100
-              px-16
-              py-1
-              mb-4
-              shadow
-              rounded-full
-              tft_subtitle
-              tracking-wide
-            "
-            :href="link"
-            >{{ button }}</a
-          >
-          
-        </div>
       </div>
-      <div class="lg:w-1/2 px-2 self-center">
-        <g-image :src="img" :alt="altImg" />
-      </div>
-    </div> -->
+    </div>
 
     <div
       class="flex flex-wrap text-center lg:text-left lg:pt-10 -mx-2"
@@ -446,7 +322,6 @@
             :href="link"
             >{{ button }}</a
           >
-         
         </div>
       </div>
       <div class="lg:w-1/2 px-2 self-center">

@@ -151,86 +151,86 @@ module.exports = {
             }
         },
 
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Person',
-                path: './content/person/**/*.md',
-                refs: {
-                    tags: {
-                        typeName: 'PersonTag',
-                        create: true
-                    },
-                    memberships: {
-                        typeName: 'Membership',
-                        create: true
-                    },
-                    projects: 'Project'
-                },
-            }
-        },
+        // {
+        //     use: '@gridsome/source-filesystem',
+        //     options: {
+        //         typeName: 'Person',
+        //         path: './content/person/**/*.md',
+        //         refs: {
+        //             tags: {
+        //                 typeName: 'PersonTag',
+        //                 create: true
+        //             },
+        //             memberships: {
+        //                 typeName: 'Membership',
+        //                 create: true
+        //             },
+        //             projects: 'Project'
+        //         },
+        //     }
+        // },
 
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Blog',
-                path: './content/blog/**/*.md',
-                templates: {
-                    BlogPost: '/blog/post/:id'
-                },
-                refs: {
-                    authors: 'Person',
-                    tags: {
-                        typeName: 'BlogTag',
-                        create: true
-                    },
+        // {
+        //     use: '@gridsome/source-filesystem',
+        //     options: {
+        //         typeName: 'Blog',
+        //         path: './content/blog/**/*.md',
+        //         templates: {
+        //             BlogPost: '/blog/post/:id'
+        //         },
+        //         refs: {
+        //             authors: 'Person',
+        //             tags: {
+        //                 typeName: 'BlogTag',
+        //                 create: true
+        //             },
 
-                    category: {
-                        typeName: 'BlogCategory',
-                        create: true
-                    }
+        //             category: {
+        //                 typeName: 'BlogCategory',
+        //                 create: true
+        //             }
 
-                }
-            }
-        },
+        //         }
+        //     }
+        // },
 
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'News',
-                path: './content/news/**/*.md',
-                refs: {
-                    authors: 'Person',
-                    tags: {
-                        typeName: 'NewsTag',
-                        create: true
-                    },
+        // {
+        //     use: '@gridsome/source-filesystem',
+        //     options: {
+        //         typeName: 'News',
+        //         path: './content/news/**/*.md',
+        //         refs: {
+        //             authors: 'Person',
+        //             tags: {
+        //                 typeName: 'NewsTag',
+        //                 create: true
+        //             },
 
-                    category: {
-                        typeName: 'NewsCategory',
-                        create: true
-                    }
-                }
-            }
-        },
+        //             category: {
+        //                 typeName: 'NewsCategory',
+        //                 create: true
+        //             }
+        //         }
+        //     }
+        // },
 
 
-        {
-            use: '@gridsome/source-filesystem',
-            options: {
-                typeName: 'Project',
-                path: './content/project/**/*.md',
-                refs: {
-                    authors: 'Person',
-                    members: 'Person',
+        // {
+        //     use: '@gridsome/source-filesystem',
+        //     options: {
+        //         typeName: 'Project',
+        //         path: './content/project/**/*.md',
+        //         refs: {
+        //             authors: 'Person',
+        //             members: 'Person',
 
-                    tags: {
-                        typeName: 'ProjectTag',
-                        create: true
-                    }
-                }
-            }
-        },
+        //             tags: {
+        //                 typeName: 'ProjectTag',
+        //                 create: true
+        //             }
+        //         }
+        //     }
+        // },
 
         // Tailwind
         {
@@ -266,49 +266,49 @@ module.exports = {
 
         }],
 
-        BlogTag: [{
-            path: '/blog/tags/:id',
-            component: '~/templates/Tag.vue'
-        }],
+        // BlogTag: [{
+        //     path: '/blog/tags/:id',
+        //     component: '~/templates/Tag.vue'
+        // }],
 
-        NewsTag: [{
-            path: '/news/tags/:id',
-            component: '~/templates/Tag.vue'
-        }],
+        // NewsTag: [{
+        //     path: '/news/tags/:id',
+        //     component: '~/templates/Tag.vue'
+        // }],
 
-        ProjectTag: [{
-            path: '/partners/tags/:id',
-            component: '~/templates/Tag.vue'
-        }],
+        // ProjectTag: [{
+        //     path: '/partners/tags/:id',
+        //     component: '~/templates/Tag.vue'
+        // }],
 
-        Membership: [{
-            path: '/people/memberships/:id',
-            component: '~/templates/Membership.vue'
-        }],
+        // Membership: [{
+        //     path: '/people/memberships/:id',
+        //     component: '~/templates/Membership.vue'
+        // }],
 
-        Blog: [{
-            path: '/blog/post/:id',
-            component: '~/templates/BlogPost.vue'
-        }],
+        // Blog: [{
+        //     path: '/blog/post/:id',
+        //     component: '~/templates/BlogPost.vue'
+        // }],
 
-        News: [{
-            path: '/news/post/:id',
-            component: '~/templates/NewsPost.vue'
-        }],
+        // News: [{
+        //     path: '/news/post/:id',
+        //     component: '~/templates/NewsPost.vue'
+        // }],
 
-        Person: [{
-            path: '/people/:id',
-            component: '~/templates/Person.vue'
-        }],
-        PersonTag: [{
-            path: '/people/tags/:id',
-            component: '~/templates/Tag.vue'
-        }],
+        // Person: [{
+        //     path: '/people/:id',
+        //     component: '~/templates/Person.vue'
+        // }],
+        // PersonTag: [{
+        //     path: '/people/tags/:id',
+        //     component: '~/templates/Tag.vue'
+        // }],
 
-        Project: [{
-            path: '/partners/:id',
-            component: '~/templates/Project.vue'
-        }],
+        // Project: [{
+        //     path: '/partners/:id',
+        //     component: '~/templates/Project.vue'
+        // }],
     },
 
     transformers: {

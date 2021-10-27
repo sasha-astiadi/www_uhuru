@@ -5,7 +5,7 @@ content1: Monopoly tech companies profit billions on your digital activity becau
 content2: The current model turned us all into products and commodity
 title2: It’s an unbalanced ecosystem, but we can fix that
 title3: Uhuru is, on the other hand, a much more balanced ecosystem
-sourceUrl: '#'
+sourceUrl: /stats
 btnTxt: View Stats
 image: hand.png # src/assets/brandPanel/..
 ---
