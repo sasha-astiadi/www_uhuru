@@ -107,6 +107,14 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'Contact',
+                path: './content/page/**/contact/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -121,7 +129,8 @@ module.exports = {
                     benefitsMain: 'BenefitsMain',
                     benefits: 'Benefits',
                     timelineMain: 'TimelineMain',
-                    timeline: 'Timeline'
+                    timeline: 'Timeline',
+                    contact: 'Contact'
                 }
             }
         },

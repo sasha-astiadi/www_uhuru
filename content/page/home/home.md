@@ -15,4 +15,5 @@ benefitsMain: benefitsMain
 benefits: [ben1, ben2, ben3]
 timelineMain: timelineMain
 timeline: [timeline1, timeline2, timeline3]
+contact: contact
 ---

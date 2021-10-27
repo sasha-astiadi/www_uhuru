@@ -56,6 +56,11 @@
         :main="$page.markdownPage.timelineMain"
         :timeline="$page.markdownPage.timeline"
       />
+      <ContactForm
+        :id="$page.markdownPage.id"
+        v-if="$page.markdownPage.contact"
+        :contact="$page.markdownPage.contact"
+      />
     </div>
   </Layout>
 </template>
@@ -149,6 +154,11 @@
        id
        content
      }
+     contact {
+       id
+       title
+       subtitle
+     }
   }
 }
 </page-query>
@@ -166,6 +176,7 @@ import ShowcaseProductsHome from "~/components/marketing/sections/cta-sections/S
 import Features from "~/components/custom/sections/Features.vue";
 import Benefits from "~/components/custom/Benefits.vue";
 import Timeline from "~/components/custom/Timeline.vue";
+import ContactForm from "~/components/custom/ContactForm.vue";
 export default {
   components: {
     BrandPanel,
@@ -173,6 +184,7 @@ export default {
     Features,
     Benefits,
     Timeline,
+    ContactForm,
   },
   computed: {
     getImg() {
