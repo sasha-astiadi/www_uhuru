@@ -8,17 +8,21 @@
       <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
         <g-image
           :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg}`)"
-          class="w-1/4"
+          class=""
         />
         <div class="">
           <h2
             class="h2 lg:text-6xl leading-none font-thin text-white typewriter"
           >
             <span class="block">{{ brand.title }}</span>
-            <span class="block green typewriter-text" v-if="brand.subtitle">{{
+            <!-- <span class="block green typewriter-text" v-if="brand.subtitle">{{
               brand.subtitle
-            }}</span>
+            }}</span> -->
           </h2>
+          <g-image
+          :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg2}`)"
+          class="w-full"
+        />
           <div class="my-36">
             <a
               v-if="brand.btnTxt.includes('http')"
@@ -59,7 +63,7 @@
             >
           </div>
           <div
-            class="pb-6 text-xl leading-tight tracking-wide max-w-md text-white"
+            class="pb-6 text-2xl leading-tight tracking-wide max-w-lg text-white"
             v-html="brand.content"
           ></div>
         </div>
@@ -73,14 +77,14 @@
 
     <div
       v-else-if="id == 'home' && brand2"
-      class="flex flex-wrap lg:text-left text-center lg:py-10 lg:px-16 bg2"
+      class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-16 bg2"
     >
-      <div class="lg:w-1/2 lg:px-6 self-center">
-        <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
+      <div class="lg:w-1/2 self-center">
+        <g-image class="mx-auto" :src="image" :alt="brand.title" />
       </div>
-      <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
+      <div class="lg:w-1/2 lg:px-32 order-1 lg:order-none lg:self-center">
         <div class="text-white max-w-lg">
-          <h4 class="leading-none font-heading font-bold max-w-lg">
+          <h4 class="leading-none font-heading font-bold ">
             {{ brand.title }}
           </h4>
           <p class="font-light text-2xl leading-tight mb-5">
@@ -153,11 +157,11 @@
       v-else-if="id == 'home' && brand3"
       class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg"
     >
-      <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
+      <div class="lg:w-1/3 lg:px-2 order-1 lg:order-none lg:self-center">
         <div class="">
-          <h3 class="h3 leading-none font-bold green">
+          <h4 class="leading-none font-heading font-bold green">
             {{ brand.title }}
-          </h3>
+          </h4>
 
           <div
             class="
@@ -184,26 +188,26 @@
           </div>
         </div>
       </div>
-      <div class="lg:w-1/2 lg:px-6 self-center">
+      <div class="lg:w-2/3 lg:px-6 self-center">
         <g-image class="w-full mx-auto" :src="image" :alt="brand.title" />
       </div>
     </div>
 
     <div
       v-else-if="id == 'home' && brand4"
-      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16 bg2"
+      class="flex flex-wrap lg:text-left text-center lg:px-16 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
-        <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
+        <g-image class="w-3/4 mx-auto mt-32 " :src="image" :alt="brand.title" />
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
-        <div class="text-white max-w-lg">
-          <h5 class="h5 leading-none font-heading font-bold max-w-sm">
+        <div class="text-white ">
+          <h5 class="h5 leading-none font-heading font-bold ">
             {{ brand.title }}
           </h5>
 
           <h2
-            class="h2 lg:text-6xl leading-none font-heading font-thin max-w-sm"
+            class="h2 text-8xl leading-none font-heading font-thin "
           >
             {{ brand.subtitle }}
           </h2>
@@ -212,7 +216,7 @@
               pb-6
               leading-tight
               tracking-wide
-              max-w-md
+              lg:max-w-2xl
               font-light
               text-2xl
               mb-5

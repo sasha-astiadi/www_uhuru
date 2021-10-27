@@ -2,7 +2,7 @@
 id: brandPanel4
 title: 'ThreeFold Presents:'
 subtitle: Uhuru Suite
-image: hand.png # src/assets/brandPanel/..
+image: hand2.png # src/assets/brandPanel/..
 ---
 #### Office Space
 Uhuru is an all-in-one productivity tool that integrates work
