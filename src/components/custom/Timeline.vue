@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 mt-4">
+  <div class="p-4 mt-4 bg2">
     <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
       <div class="md:contents" v-for="(item, id) in timeline" :key="id">
         <div class="col-start-2 col-end-4 mr-10 md:mx-auto relative">
@@ -46,3 +46,17 @@ export default {
   props: ["id", "main", "timeline"],
 };
 </script>
+
+<style scoped>
+.bg {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #313035, #121214));
+  background: linear-gradient(to right, #313035, #121214);
+}
+
+.bg2 {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #121214, #313035,));
+  background: linear-gradient(to right, #121214, #313035);
+}
+</style>

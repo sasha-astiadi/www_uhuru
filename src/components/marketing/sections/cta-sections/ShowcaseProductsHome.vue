@@ -1,5 +1,5 @@
 <template>
-  <div class="py-10 mb-5" id="home">
+  <div class="py-10 bg" id="home">
     <div
       class="w-full max-w-7xl mx-auto mt-10 px-4 text-center text-white"
       v-if="main"
@@ -82,6 +82,19 @@ export default {
 <style scoped>
 .bannerFondo {
   height: 400px;
+}
+
+
+.bg {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #313035, #121214));
+  background: linear-gradient(to right, #313035, #121214);
+}
+
+.bg2 {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #121214, #313035,));
+  background: linear-gradient(to right, #121214, #313035);
 }
 
 /* .take_apart {
