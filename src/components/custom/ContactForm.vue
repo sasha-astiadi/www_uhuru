@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40">
+  <div class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg">
     <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
       <h2 class="h2 lg:text-7xl leading-none font-thin text-white max-w-lg">
         <span class="block">{{ contact.title }}</span>
@@ -192,3 +192,16 @@ export default {
   props: ["id", "contact"],
 };
 </script>
+<style scoped>
+.bg {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #313035, #121214));
+  background: linear-gradient(to right, #313035, #121214);
+}
+
+.bg2 {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #121214, #313035,));
+  background: linear-gradient(to right, #121214, #313035);
+}
+</style>

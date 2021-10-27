@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24 px-4 text-center text-white" v-if="id == 'home'">
+  <section class="py-24 px-4 text-center text-white bg" v-if="id == 'home'">
     <h2
       class="
         h2
@@ -320,5 +320,18 @@ export default {
 }
 .feature {
   max-height: 315px !important;
+}
+
+
+.bg {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #313035, #121214));
+  background: linear-gradient(to right, #313035, #121214);
+}
+
+.bg2 {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #121214, #313035,));
+  background: linear-gradient(to right, #121214, #313035);
 }
 </style>

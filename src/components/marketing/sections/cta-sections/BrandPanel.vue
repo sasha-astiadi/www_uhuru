@@ -191,7 +191,7 @@
 
     <div
       v-else-if="id == 'home' && brand4"
-      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16 bg1"
+      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
