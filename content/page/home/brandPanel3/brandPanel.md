@@ -1,7 +1,7 @@
 ---
 id: brandPanel3
 title: Data and connectivity truly yours
-image: home-hand.jpg # src/assets/brandPanel/..
+image: macbook.png # src/assets/brandPanel/..
 subImg: switcher-img.png
 excerpt: The perfect combo for any community to thrive
 ---

@@ -1,9 +1,9 @@
 <template>
-  <div class="mx-auto mt-10">
+  <div class="mx-auto ">
     <!-- home -->
     <div
       v-if="id == 'home' && brand1 && !brand2 && !brand3 && !brand4"
-      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40"
+      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg"
     >
       <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
         <g-image
@@ -73,7 +73,7 @@
 
     <div
       v-else-if="id == 'home' && brand2"
-      class="flex flex-wrap lg:text-left text-center lg:py-10 lg:px-16"
+      class="flex flex-wrap lg:text-left text-center lg:py-10 lg:px-16 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
@@ -151,7 +151,7 @@
 
     <div
       v-else-if="id == 'home' && brand3"
-      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40"
+      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg"
     >
       <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
         <div class="">
@@ -185,7 +185,7 @@
 
     <div
       v-else-if="id == 'home' && brand4"
-      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16"
+      class="flex flex-wrap lg:text-left text-center lg:py-16 lg:px-16 bg1"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image class="w-1/2 mx-auto" :src="image" :alt="brand.title" />
@@ -220,7 +220,7 @@
     <!-- Security -->
     <div
       v-else-if="id == 'security'"
-      class="flex flex-wrap lg:text-left text-center lg:p-28 mt-24"
+      class="flex flex-wrap lg:text-left text-center lg:p-28 mt-24 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image
@@ -339,6 +339,18 @@ export default {
   white-space: nowrap;
   border-right: 4px solid #81e0cd;
   box-sizing: border-box;
+}
+
+.bg {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #313035, #121214));
+  background: linear-gradient(to right, #313035, #121214);
+}
+
+.bg2 {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #121214, #313035,));
+  background: linear-gradient(to right, #121214, #313035);
 }
 
 @keyframes typing {
