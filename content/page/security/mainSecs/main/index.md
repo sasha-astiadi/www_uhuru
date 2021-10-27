@@ -1,4 +1,4 @@
 ---
 id: security_brandPanel
-image: security.png # src/assets/brandPanel/..
+image: circle_with_log.png # src/assets/brandPanel/..
 ---

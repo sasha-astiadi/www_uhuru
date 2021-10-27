@@ -171,11 +171,17 @@
             "
             v-html="brand.content"
           ></div>
-
-          <!-- <g-image
-            :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg}`)"
-            class="w-1/4"
-          /> -->
+          <div class="">
+            <g-image
+              class="w-1/4 inline-flex mr-5"
+              :src="
+                require(`!!assets-loader!@images/brandPanel/${brand.subImg}`)
+              "
+            />
+            <p class="max-w-xs leading-none lg:text-2xl inline-flex text-white">
+              {{ brand.excerpt }}
+            </p>
+          </div>
         </div>
       </div>
       <div class="lg:w-1/2 lg:px-6 self-center">
@@ -231,7 +237,11 @@
         />
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
-        <div class="text-white max-w-lg my-10" v-for="sec in sections" :key="sec.id">
+        <div
+          class="text-white max-w-lg my-10"
+          v-for="sec in sections"
+          :key="sec.id"
+        >
           <h4 class="h4 leading-none font-heading font-bold max-w-lg">
             <font-awesome :icon="['fas', 'angle-double-right']" class="mr-2" />
             {{ sec.title }}
