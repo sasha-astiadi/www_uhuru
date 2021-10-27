@@ -6,10 +6,7 @@
       :theme="this.theme"
     />
     <slot />
-    <!-- <Footer 
-      :record="$static.footer"
-      @setTheme="setTheme"
-      :theme="this.theme" /> -->
+    <Footer :record="$static.footer" @setTheme="setTheme" :theme="this.theme" />
   </div>
 </template>
 
@@ -59,34 +56,20 @@ query {
   }
 
   footer(id: "footer"){
-      facebook
-      github
-      twitter
-      dribbble
-      instagram
-      telegram
-      description
-      items{
-        title
-        links{
-          name
-          link
-        }
-      }
+      id
+      title
+      title2
+      content
+      logo
+      button1
+      link1
+      button2
+      link2
     }
 }
 </static-query>
 
 <style>
-
-
-body {
-  font-family: Futura Book font,
-    "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  line-height: 1.5;
-}
-
 .layout {
   max-width: 760px;
   margin: 0 auto;
@@ -105,5 +88,4 @@ body {
 .nav__link {
   margin-left: 20px;
 }
-
 </style>
