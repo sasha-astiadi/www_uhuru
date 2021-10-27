@@ -115,6 +115,21 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                typeName: 'SecurityMain',
+                path: './content/page/**/mainSecs/main/*.md',
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Security',
+                path: './content/page/**/mainSecs/**/*.md',
+            }
+        },
+
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 typeName: 'MarkdownPage',
                 path: './content/page/*/*.md',
                 refs: {
@@ -130,7 +145,9 @@ module.exports = {
                     benefits: 'Benefits',
                     timelineMain: 'TimelineMain',
                     timeline: 'Timeline',
-                    contact: 'Contact'
+                    contact: 'Contact',
+                    securityMain: 'SecurityMain',
+                    security: 'Security'
                 }
             }
         },

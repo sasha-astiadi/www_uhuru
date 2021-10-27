@@ -68,8 +68,8 @@
         <g-image class="w-full mx-auto" :src="image" :alt="brand.title" />
       </div>
     </div>
-    
-   <!-- section tow -->
+
+    <!-- section tow -->
 
     <div
       v-else-if="id == 'home' && brand2"
@@ -83,7 +83,9 @@
           <h4 class="leading-none font-heading font-bold max-w-lg">
             {{ brand.title }}
           </h4>
-          <p class="font-light text-2xl leading-tight mb-5">{{ brand.content1 }}</p>
+          <p class="font-light text-2xl leading-tight mb-5">
+            {{ brand.content1 }}
+          </p>
           <p class="font-light leading-tight text-2xl">{{ brand.content2 }}</p>
           <div class="my-10">
             <a
@@ -91,14 +93,35 @@
               target="_blank"
               :href="brand.sourceUrl"
               class="
-                bg-transparent hover:bg-green-400 text-white font-extrabold hover:text-white py-1 text-2xl px-10 border border-white hover:border-transparent rounded-full
+                bg-transparent
+                hover:bg-green-400
+                text-white
+                font-extrabold
+                hover:text-white
+                py-1
+                text-2xl
+                px-10
+                border border-white
+                hover:border-transparent
+                rounded-full
               "
               >{{ brand.btnTxt }}</a
             >
             <a
               v-else
               :href="brand.sourceUrl"
-              class="bg-transparent hover:bg-green-400 text-white font-extrabold hover:text-white py-1 text-2xl px-10 border border-white hover:border-transparent rounded-full
+              class="
+                bg-transparent
+                hover:bg-green-400
+                text-white
+                font-extrabold
+                hover:text-white
+                py-1
+                text-2xl
+                px-10
+                border border-white
+                hover:border-transparent
+                rounded-full
               "
               >{{ brand.btnTxt }}</a
             >
@@ -194,6 +217,33 @@
       </div>
     </div>
 
+    <!-- Security -->
+    <div
+      v-else-if="id == 'security'"
+      class="flex flex-wrap lg:text-left text-center lg:p-28 mt-24"
+    >
+      <div class="lg:w-1/2 lg:px-6 self-center">
+        <g-image
+          v-if="main.image"
+          class="w-3/4 mx-auto"
+          :src="require(`!!assets-loader!@images/brandPanel/${main.image}`)"
+          :alt="main.title"
+        />
+      </div>
+      <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
+        <div class="text-white max-w-lg my-10" v-for="sec in sections" :key="sec.id">
+          <h4 class="h4 leading-none font-heading font-bold max-w-lg">
+            <font-awesome :icon="['fas', 'angle-double-right']" class="mr-2" />
+            {{ sec.title }}
+          </h4>
+          <div
+            class="font-light text-md leading-tight mb-5"
+            v-html="sec.content"
+          ></div>
+        </div>
+      </div>
+    </div>
+
     <div
       v-else
       class="
@@ -257,7 +307,16 @@
 
 <script>
 export default {
-  props: ["brand", "id", "brand1", "brand2", "brand3", "brand4"],
+  props: [
+    "brand",
+    "id",
+    "brand1",
+    "brand2",
+    "brand3",
+    "brand4",
+    "main",
+    "sections",
+  ],
   computed: {
     image() {
       return this.brand.image.src
