@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto ">
+  <div class="mx-auto">
     <!-- home -->
     <div
       v-if="id == 'home' && brand1 && !brand2 && !brand3 && !brand4"
@@ -353,13 +353,13 @@ export default {
 
 .bg {
   background: #121214;
-  background: -webkit-linear-gradient(to right, #313035, #121214));
+  background: -webkit-linear-gradient(to right, #313035, #121214);
   background: linear-gradient(to right, #313035, #121214);
 }
 
 .bg2 {
   background: #121214;
-  background: -webkit-linear-gradient(to right, #121214, #313035,));
+  background: -webkit-linear-gradient(to right, #121214, #313035);
   background: linear-gradient(to right, #121214, #313035);
 }
 
