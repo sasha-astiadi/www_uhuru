@@ -1,6 +1,7 @@
 <template>
   <div
     class="mx-auto py-12 lg:py-56 benefits bg-cover"
+    id="benefits"
     :style="{ 'background-image': 'url(' + main.background.src + ')' }"
   >
     <div class="flex flex-wrap lg:text-left text-center lg:px-40">

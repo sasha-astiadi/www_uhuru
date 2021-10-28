@@ -38,17 +38,17 @@ query {
   }
 
   navigation(id: "navigation"){
-  #  navLinks{
-  #    name
-  #    link
-  #    external
-  #    expandable
-  #    submenu {
-  #      title
-  #      path
-  #      external
-  #    }
-  #  }
+    navLinks{
+      name
+      link
+      external
+      expandable
+    #  submenu {
+    #    title
+    #    path
+    #    external
+    #  }
+    }
     social{
       icon
       link

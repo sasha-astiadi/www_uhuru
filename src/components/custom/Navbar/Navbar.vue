@@ -245,14 +245,14 @@
             :href="element.link"
             @click="clicked"
             target="_blank"
-            class="inline-flex sm:flex uppercase p-2 mr-2 animated-link"
+            class="inline-flex sm:flex uppercase p-2 mr-2 animated-link green "
             >{{ element.name }}</a
           >
           <a
             v-else
             :href="element.link"
             @click="clicked"
-            class="inline-flex sm:flex uppercase p-2 mr-2 animated-link"
+            class="inline-flex sm:flex uppercase p-2 mr-2 animated-link green"
             >{{ element.name }}</a
           >
         </div>

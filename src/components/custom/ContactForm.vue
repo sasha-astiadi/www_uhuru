@@ -1,5 +1,6 @@
 <template>
-  <div class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-40 bg">
+  <div class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-40 bg"
+  id="join">
     <div class="lg:w-1/2 lg:px-20 order-1 lg:order-none lg:self-center ">
       <h2 class="text-8xl leading-none font-thin text-white">
         <span class="block">{{ contact.title }}</span>

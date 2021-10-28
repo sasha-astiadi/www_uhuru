@@ -157,6 +157,7 @@
 
     <div
       v-else-if="id == 'home' && brand3"
+      id="web"
       class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg"
     >
       <div class="lg:w-1/3 lg:px-2 order-1 lg:order-none lg:self-center">
@@ -197,6 +198,7 @@
 
     <div
       v-else-if="id == 'home' && brand4"
+      id="uhuru"
       class="flex flex-wrap lg:text-left text-center lg:px-16 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
