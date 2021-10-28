@@ -2,7 +2,7 @@
 id: brandPanel
 title: Switch on your
 subtitle: Autonomous Community
-sourceUrl: '#'
+sourceUrl: '#connectivity'
 btnTxt: Learn more
 image: home-hand.jpg # src/assets/brandPanel/..
 subImg: switcher-img.png

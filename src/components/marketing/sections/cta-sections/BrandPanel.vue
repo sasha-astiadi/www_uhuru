@@ -86,6 +86,7 @@
 
     <div
       v-else-if="id == 'home' && brand2"
+      id="connectivity"
       class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-16 bg2"
     >
       <div class="lg:w-1/2 self-center">
@@ -229,7 +230,7 @@
     <!-- Security -->
     <div
       v-else-if="id == 'security'"
-      class="flex flex-wrap lg:text-left text-center lg:p-28 mt-24 bg2"
+      class="flex flex-wrap lg:text-left text-center lg:p-28  bg"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image
@@ -241,16 +242,16 @@
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
         <div
-          class="text-white max-w-lg my-10"
+          class="text-white max-w-2xl my-10"
           v-for="sec in sections"
           :key="sec.id"
         >
-          <h4 class="h4 leading-none font-heading font-bold max-w-lg">
+          <h3 class="leading-none font-heading font-normal">
             <font-awesome :icon="['fas', 'angle-double-right']" class="mr-2" />
             {{ sec.title }}
-          </h4>
+          </h3>
           <div
-            class="font-light text-md leading-tight mb-5"
+            class="font-light text-xl leading-tight mb-5"
             v-html="sec.content"
           ></div>
         </div>

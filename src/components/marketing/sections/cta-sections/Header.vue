@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-10 bg-no-repeats">
+  <section class="bg-no-repeats bg">
     <div
       class="flex flex-wrap text-center items-center pb-20 lg:text-left -mx-2"
       v-if="id == 'why'"
@@ -84,12 +84,14 @@
 
     <div
       class="
-        lg:p-40
+        lg:py-60
+        lg:mx-40
         flex flex-wrap
         text-center
         items-center
-        lg:text-left lg:mb-10 lg:mt-4
+        lg:text-left  
         -mx-2
+        
       "
       v-else-if="id == 'stats'"
     >
@@ -102,21 +104,21 @@
           lg:order-none lg:self-center
         "
       >
-        <h5 class="h5 text-white leading-none font-heading font-bold max-w-sm">
+        <h3 class="text-2xl text-white leading-none font-heading font-bold max-w-sm">
           {{ slogan }}
-        </h5>
-        <h1 class="h1 text-white font-thin my-6 lg:text-7xl leading-tight font-heading">
+        </h3>
+        <h2 class="text-white font-thin my-6 lg:text-7xl leading-none font-heading">
           {{ title }}
-        </h1>
+        </h2>
       </div>
       <div class="lg:w-1/2 px-2 lg:self-center">
-        <g-image :src="img" class="w-3/4 mx-auto my-10" :alt="altImg" />
+        <g-image :src="img" class="mx-auto my-10" :alt="altImg" />
         <div
           class="
             text-white
             mb-8
             px-10
-            text-center text-2xl text-extrabold
+            text-center text-xl text-bold
             leading-normal
             mx-auto
           "
@@ -361,6 +363,18 @@ export default {
 </script>
 
 <style scoped>
+.bg {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #313035, #121214);
+  background: linear-gradient(to right, #313035, #121214);
+}
+
+.bg2 {
+  background: #121214;
+  background: -webkit-linear-gradient(to right, #121214, #313035);
+  background: linear-gradient(to right, #121214, #313035);
+}
+
 .bg-home {
   background: #70dfc9;
   background: -webkit-linear-gradient(to bottom, #ea1ff7, #70dfc9);
