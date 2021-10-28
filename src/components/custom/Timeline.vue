@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto py-12 bg2">
+  <div class="mx-auto lg:p-40 bg">
     <div class="grid grid-cols-1 md:grid-cols-12 text-gray-50">
       <div class="md:contents" v-for="(item, id) in timeline" :key="id">
         <div class="col-start-1 mr-10 md:mx-auto relative">
@@ -32,11 +32,11 @@
             w-full
           "
         >
-          <div class="font-thin text-lg mb-1" v-html="item.content"></div>
+          <div class="font-normal text-xl mb-1" v-html="item.content"></div>
         </div>
       </div>
 
-      <div class="md:contents">
+      <div class="md:contents text-center">
         <div
           class="
             row-start-1 row-end-6
@@ -49,11 +49,11 @@
           :style="{ 'background-image': 'url(' + main.image.src + ')' }"
         >
           <div class="font-thin text-lg mb-1">
-            <h5 class="leading-none font-heading font-bold max-w-lg lg:mb-80">
+            <h3 class="leading-none font-heading font-bold lg:mb-80">
               {{ main.title }}
-            </h5>
+            </h3>
             <div
-              class="leading-none font-thin lg:text-6xl mb-1"
+              class="leading-none font-thin text-center lg:text-6xl lg:pt-24"
               v-html="main.content"
             ></div>
           </div>
@@ -72,8 +72,8 @@ export default {
 <style scoped>
 .bg {
   background: #121214;
-  background: -webkit-linear-gradient(to right, #313035, #121214);
-  background: linear-gradient(to right, #313035, #121214);
+  background: -webkit-linear-gradient(to right, #313035, #212121);
+  background: linear-gradient(0.25turn, #313035, #212121, #212121);
 }
 
 .bg2 {
