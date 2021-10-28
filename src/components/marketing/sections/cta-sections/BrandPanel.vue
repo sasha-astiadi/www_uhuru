@@ -83,10 +83,10 @@
         <g-image class="mx-auto" :src="image" :alt="brand.title" />
       </div>
       <div class="lg:w-1/2 lg:px-32 order-1 lg:order-none lg:self-center">
-        <div class="text-white max-w-lg">
-          <h4 class="leading-none font-heading font-bold ">
+        <div class="text-white max-w-xl">
+          <h3 class="leading-none font-heading font-medium">
             {{ brand.title }}
-          </h4>
+          </h3>
           <p class="font-light text-2xl leading-tight mb-5">
             {{ brand.content1 }}
           </p>
@@ -131,24 +131,24 @@
             >
           </div>
 
-          <h4 class="leading-none font-heading font-bold max-w-lg">
+          <h3 class="leading-none font-heading font-medium">
             {{ brand.title2 }}
-          </h4>
+          </h3>
           <div
             class="
               pb-6
               leading-tight
               tracking-wide
-              max-w-md
+              
               font-light
               text-2xl
               mb-5
             "
             v-html="brand.content"
           ></div>
-          <h4 class="leading-none font-heading font-bold max-w-lg">
+          <h3 class="leading-none font-heading font-medium">
             {{ brand.title3 }}
-          </h4>
+          </h3>
         </div>
       </div>
     </div>
@@ -159,9 +159,9 @@
     >
       <div class="lg:w-1/3 lg:px-2 order-1 lg:order-none lg:self-center">
         <div class="">
-          <h4 class="leading-none font-heading font-bold green">
+          <h3 class="leading-none font-heading font-bold green">
             {{ brand.title }}
-          </h4>
+          </h3>
 
           <div
             class="
