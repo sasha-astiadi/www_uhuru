@@ -5,22 +5,22 @@
   >
     <div class="flex flex-wrap lg:text-left text-center lg:px-40">
       <div
-        class="lg:w-1/2 lg:px-2 col-span-2 order-1 lg:order-none lg:self-center"
+        class="lg:w-2/3 lg:px-2 col-span-2 order-1 lg:order-none lg:self-center max-w-4xl"
         v-if="main"
       >
-        <h4 class="h4 leading-none font-bold text-white typewriter">
+        <h3 class="leading-none font-bold text-white typewriter">
           {{ main.title }}
-        </h4>
+        </h3>
         <h2
-          class="h2 pb-6 lg:text-6xl leading-tight font-thin text-white"
+          class="h2 pb-6 text-8xl  leading-tight font-thin text-white"
           v-html="main.content"
         ></h2>
       </div>
-      <div class="lg:w-1/2 lg:px-2 order-2 lg:order-none lg:self-end">
+      <div class="lg:w-1/3 lg:px-20 order-2 lg:order-none lg:self-end">
         <dl
           class="
-            space-y-10
-            md:space-y-0 md:grid md:grid-cols-1 md:gap-x-8 md:gap-y-10
+            space-y-8
+            md:space-y-0 md:grid md:grid-cols-1 md:gap-x-8 md:gap-y-4
           "
         >
           <div
@@ -29,12 +29,12 @@
             class="relative max-w-xs"
           >
             <dt>
-              <div class="absolute flex justify-center h-12 w-12 text-white">
+              <div class="absolute flex justify-center h-16 w-16 text-white">
                 <font-awesome :icon="['fas', 'check-circle']" />
               </div>
-              <p class="ml-16 text-xl leading-6 font-medium text-white">
+              <h3 class="ml-16 text-2xl leading-7 font-bold text-white">
                 {{ benefit.title }}
-              </p>
+              </h3>
             </dt>
           </div>
           <div class="inline-flex ml-12">

@@ -20,9 +20,11 @@
             }}</span> -->
           </h2>
           <g-image
-          :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg2}`)"
-          class="w-full"
-        />
+            :src="
+              require(`!!assets-loader!@images/brandPanel/${brand.subImg2}`)
+            "
+            class="w-full"
+          />
           <div class="my-36">
             <a
               v-if="brand.btnTxt.includes('http')"
@@ -63,7 +65,14 @@
             >
           </div>
           <div
-            class="pb-6 text-2xl leading-tight tracking-wide max-w-lg text-white"
+            class="
+              pb-6
+              text-2xl
+              leading-tight
+              tracking-wide
+              max-w-lg
+              text-white
+            "
             v-html="brand.content"
           ></div>
         </div>
@@ -135,15 +144,7 @@
             {{ brand.title2 }}
           </h3>
           <div
-            class="
-              pb-6
-              leading-tight
-              tracking-wide
-              
-              font-light
-              text-2xl
-              mb-5
-            "
+            class="pb-6 leading-tight tracking-wide font-light text-2xl mb-5"
             v-html="brand.content"
           ></div>
           <h3 class="leading-none font-heading font-medium">
@@ -198,17 +199,15 @@
       class="flex flex-wrap lg:text-left text-center lg:px-16 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
-        <g-image class="w-3/4 mx-auto mt-32 " :src="image" :alt="brand.title" />
+        <g-image class="w-3/4 mx-auto mt-32" :src="image" :alt="brand.title" />
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
-        <div class="text-white ">
-          <h3 class="text-3xl leading-none font-heading font-bold ">
+        <div class="text-white">
+          <h3 class="text-3xl leading-none font-heading font-bold">
             {{ brand.title }}
           </h3>
 
-          <h2
-            class="h2 text-8xl leading-none font-heading font-thin "
-          >
+          <h2 class="h2 text-8xl leading-none font-heading font-thin">
             {{ brand.subtitle }}
           </h2>
           <div
