@@ -1,17 +1,18 @@
 
 <template>
   <footer class="bg-green">
-    <div class="mx-auto py-6 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto py-6 px-4 sm:px-6 lg:px-20">
       <div class="md:flex md:items-center md:justify-between">
         <div class="flex space-x-6 md:order-2">
           <div class="w-full max-w-3xl mx-auto">
             <h2
               v-if="record.title2"
               class="
-                lg:text-2xl
+                lg:text-3xl
                 text-center
-                uppercase
+                capitalize
                 mb-2
+                font-bold
                 leading-none
                 font-normal font-heading
               "
@@ -28,7 +29,7 @@
                   learn-button
                   px-12
                   py-1
-                  mr-5
+                  lg:mr-10
                   my-4
                   border-2
                   shadow
@@ -49,7 +50,7 @@
                   learn-button
                   px-12
                   py-1
-                  mr-5
+                  lg:mr-10
                   my-4
                   border-2
                   shadow
@@ -105,19 +106,20 @@
         </div>
         <div class="inline-block">
           <g-image
-            class="w-10 inline-block mr-5 md:justify-between"
+            class="inline-block mr-5 lg:mb-10 md:justify-between"
             :src="record.logo.src"
             alt="Uhuru"
           />
-          <div class="inline-block border-l-2 border-black py-5 pl-3">
-            <h6 class="h6 m-0">{{ record.title }}</h6>
+          <div class="inline-block border-l-2 border-black mt-2 pl-3">
+            <h3 class="text-2xl m-0">{{ record.title }}</h3>
             <div
               class="
                 my-3
-                text-base
+                text-2xl
                 leading-none
                 text-gray-900
-                max-w-xs
+                max-w-md
+                font-bold
                 md:mt-0 md:order-1
               "
               v-html="record.content"
