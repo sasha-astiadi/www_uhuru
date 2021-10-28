@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-wrap lg:text-left text-center lg:pt-32 lg:px-40 bg">
-    <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
-      <h2 class="h2 lg:text-7xl leading-none font-thin text-white max-w-lg">
+  <div class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-40 bg">
+    <div class="lg:w-1/2 lg:px-20 order-1 lg:order-none lg:self-center ">
+      <h2 class="text-8xl leading-none font-thin text-white">
         <span class="block">{{ contact.title }}</span>
         <span class="block green" v-if="contact.subtitle">{{
           contact.subtitle
@@ -17,7 +17,7 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700 text-xs
+                green text-xl
                 font-bold
                 mb-2
               "
@@ -30,8 +30,8 @@
                 appearance-none
                 block
                 w-full
-                bg-black
-                text-teal-400
+                bg-transparent
+                text-gray-400
                 border border-gray-500
                 rounded-full
                 py-3
@@ -52,7 +52,7 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700 text-xs
+                green text-xl
                 font-bold
                 mb-2
               "
@@ -65,8 +65,8 @@
                 appearance-none
                 block
                 w-full
-                bg-black
-                text-gray-700
+                bg-transparent
+                text-gray-400
                 border border-gray-500
                 rounded-full
                 py-3
@@ -89,7 +89,7 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700 text-xs
+                green text-xl
                 font-bold
                 mb-2
               "
@@ -102,8 +102,8 @@
                 appearance-none
                 block
                 w-full
-                bg-black
-                text-gray-700
+                bg-transparent
+                text-gray-400
                 border border-gray-500
                 rounded-full
                 py-3
@@ -125,7 +125,7 @@
                 block
                 uppercase
                 tracking-wide
-                text-gray-700 text-xs
+                green text-xl
                 font-bold
                 mb-2
               "
@@ -139,8 +139,8 @@
                 appearance-none
                 block
                 w-full
-                bg-black
-                green
+                bg-transparent
+                text-gray-400
                 border border-gray-500
                 rounded-lg
                 py-3
@@ -170,8 +170,9 @@
                 focus:shadow-outline focus:outline-none
                 text-teal-400
                 font-bold
-                py-2
-                px-6
+                py-1
+                px-8
+                text-xl
                 rounded-full
                 border border-teal-400
               "
