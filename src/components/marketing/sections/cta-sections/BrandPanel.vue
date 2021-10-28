@@ -202,9 +202,9 @@
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
         <div class="text-white ">
-          <h5 class="h5 leading-none font-heading font-bold ">
+          <h3 class="text-3xl leading-none font-heading font-bold ">
             {{ brand.title }}
-          </h5>
+          </h3>
 
           <h2
             class="h2 text-8xl leading-none font-heading font-thin "

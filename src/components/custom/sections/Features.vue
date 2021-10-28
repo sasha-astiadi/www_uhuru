@@ -1,21 +1,20 @@
 <template>
-  <section class="py-24 px-4 text-center text-white bg" v-if="id == 'home'">
-    <h2
+  <section class="pt-24 px-4 text-center text-white bg" v-if="id == 'home'">
+    <h3
       class="
-        h2
+        text-5xl
         mx-auto
         leading-tight
-        mb-6
         font-bold font-heading
-        uppercase
+        capitalize
         lg:max-w-2xl
       "
     >
       {{ main.title }}
-    </h2>
+    </h3>
 
     <h2
-      class="h2 mx-auto leading-tight mb-6 font-thin font-heading lg:max-w-2xl"
+      class="text-5xl mx-auto leading-tight mb-6 font-thin font-heading lg:max-w-2xl"
     >
       {{ main.subtitle }}
     </h2>
@@ -32,7 +31,7 @@
         </div>
 
         <div v-else class="max-w-xs mx-auto">
-          <h5 class="h5 text-3xl font-light">
+          <h5 class="h5 text-3xl font-bold">
             {{ feature.title }}
           </h5>
           <div v-html="feature.content" class="lg:text-xl text-gray-800"></div>

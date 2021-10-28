@@ -4,9 +4,9 @@
       class="w-full max-w-7xl mx-auto mt-10 px-4 text-center text-white"
       v-if="main"
     >
-      <h2 v-if="main.title" class="h2 font-semibold leading-tight font-heading">
+      <h3 v-if="main.title" class="text-4xl mb-6 font-semibold leading-tight font-heading">
         {{ main.title }}
-      </h2>
+      </h3>
       <p v-if="main.subtitle" class="mb-6 text-xl">
         {{ main.subtitle }}
       </p>
@@ -23,7 +23,7 @@
         <div class="text-center pb-8 my-5 green" :class="{ active: idx !== 1 }">
           <g-image class="w-1/2 mx-auto mb-10" :src="img(product.image)" />
           <h3 class="font-bold text-2xl">{{ product.title }}</h3>
-          <div v-html="product.content" class="text-xl pb-4 px-10"></div>
+          <div v-html="product.content" class="text-xl font-bold pb-4 px-10"></div>
 
           <div v-if="product.button">
             <a
