@@ -19,11 +19,11 @@
       }"
     >
       <div class="flex items-center justify-between px-4 sm:p-0">
-        <div class="inline-flex items-center flex-shrink-0">
+        <div class="flex items-center flex-shrink-0 px-4">
           <a href="/">
             <g-image
               :src="require(`!!assets-loader!@images/logo.png`)"
-              class="lg:ml-10 mr-3 fill-current logo"
+              class="h-8 w-24"
               alt=""
             />
 
@@ -38,7 +38,7 @@
           <button
             @click="isOpen = !isOpen"
             type="button"
-            class="block ml-auto text-gray-900 focus:outline-none"
+            class="block ml-auto text-white focus:outline-none"
           >
             <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
               <path
@@ -109,8 +109,8 @@
           pt-2
           ml-auto
           pb-4
-          lg:flex lg:p-0 lg:w-100
-          xs:bg-transparent
+          lg:flex lg:p-0 lg:w-100 lg:bg-transparent
+          bg-black
         "
       >
         <div
@@ -245,7 +245,7 @@
             :href="element.link"
             @click="clicked"
             target="_blank"
-            class="inline-flex sm:flex uppercase p-2 mr-2 animated-link green "
+            class="inline-flex sm:flex uppercase p-2 mr-2 animated-link green"
             >{{ element.name }}</a
           >
           <a
@@ -298,7 +298,10 @@
           >
             <span class="telegram_icon">
               <a :href="element.link" target="_blank" rel="noopener noreferrer">
-                <font-awesome :icon="['fab', element.icon]" class='text-white'/>
+                <font-awesome
+                  :icon="['fab', element.icon]"
+                  class="text-white"
+                />
               </a>
             </span>
           </li>

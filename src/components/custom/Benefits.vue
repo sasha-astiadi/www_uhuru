@@ -6,14 +6,20 @@
   >
     <div class="flex flex-wrap lg:text-left text-center lg:px-40">
       <div
-        class="lg:w-2/3 lg:px-2 col-span-2 order-1 lg:order-none lg:self-center max-w-4xl"
+        class="
+          lg:w-2/3 lg:px-2
+          col-span-2
+          order-1
+          lg:order-none lg:self-center
+          max-w-4xl
+        "
         v-if="main"
       >
         <h3 class="leading-none font-bold text-white typewriter">
           {{ main.title }}
         </h3>
         <h2
-          class="h2 pb-6 text-8xl  leading-tight font-thin text-white"
+          class="h2 pb-6 lg:text-8xl leading-tight font-thin text-white"
           v-html="main.content"
         ></h2>
       </div>

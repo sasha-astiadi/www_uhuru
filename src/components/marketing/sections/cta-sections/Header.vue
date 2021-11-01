@@ -91,7 +91,7 @@
         items-center
         lg:text-left  
         -mx-2
-        
+        mt-12
       "
       v-else-if="id == 'stats'"
     >
@@ -102,6 +102,7 @@
           lg:pr-10 lg:mt-10
           order-1
           lg:order-none lg:self-center
+          
         "
       >
         <h3 class="text-2xl text-white leading-none font-heading font-bold max-w-sm">

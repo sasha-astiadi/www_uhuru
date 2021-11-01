@@ -3,21 +3,17 @@
     <!-- home -->
     <div
       v-if="id == 'home' && brand1 && !brand2 && !brand3 && !brand4"
-      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg"
+      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg mt-20"
     >
       <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
         <g-image
           :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg}`)"
-          class=""
         />
-        <div class="">
+        <div>
           <h2
             class="h2 lg:text-6xl leading-none font-thin text-white typewriter"
           >
             <span class="block">{{ brand.title }}</span>
-            <!-- <span class="block green typewriter-text" v-if="brand.subtitle">{{
-              brand.subtitle
-            }}</span> -->
           </h2>
           <g-image
             :src="
@@ -25,7 +21,7 @@
             "
             class="w-full"
           />
-          <div class="my-36">
+          <div class="my-10 lg:my-36">
             <a
               v-if="brand.btnTxt.includes('http')"
               target="_blank"
@@ -232,19 +228,19 @@
     <!-- Security -->
     <div
       v-else-if="id == 'security'"
-      class="flex flex-wrap lg:text-left text-center lg:p-28  bg"
+      class="flex flex-wrap lg:text-left text-center lg:p-28 bg"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image
           v-if="main.image"
-          class="w-3/4 mx-auto"
+          class="w-1/2 lg:w-3/4 mx-auto"
           :src="require(`!!assets-loader!@images/brandPanel/${main.image}`)"
           :alt="main.title"
         />
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
         <div
-          class="text-white max-w-2xl my-10"
+          class="text-white lg:max-w-2xl my-10"
           v-for="sec in sections"
           :key="sec.id"
         >
@@ -253,7 +249,7 @@
             {{ sec.title }}
           </h3>
           <div
-            class="font-light text-xl leading-tight mb-5"
+            class="font-light text-2xl lg:text-xl lg:leading-tight mb-5"
             v-html="sec.content"
           ></div>
         </div>

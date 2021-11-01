@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-40 bg"
-  id="join">
-    <div class="lg:w-1/2 lg:px-20 order-1 lg:order-none lg:self-center ">
+  <div
+    class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-40 bg"
+    id="join"
+  >
+    <div class="lg:w-1/2 lg:px-20 order-1 lg:order-none lg:self-center">
       <h2 class="text-8xl leading-none font-thin text-white">
         <span class="block">{{ contact.title }}</span>
         <span class="block green" v-if="contact.subtitle">{{
@@ -18,9 +20,11 @@
                 block
                 uppercase
                 tracking-wide
-                green text-xl
+                green
+                text-xl
                 font-bold
                 mb-2
+                text-left
               "
               for="grid-first-name"
             >
@@ -53,9 +57,11 @@
                 block
                 uppercase
                 tracking-wide
-                green text-xl
+                green
+                text-xl
                 font-bold
                 mb-2
+                text-left
               "
               for="grid-password"
             >
@@ -90,9 +96,11 @@
                 block
                 uppercase
                 tracking-wide
-                green text-xl
+                green
+                text-xl
                 font-bold
                 mb-2
+                text-left
               "
               for="grid-subject"
             >
@@ -126,9 +134,11 @@
                 block
                 uppercase
                 tracking-wide
-                green text-xl
+                green
+                text-xl
                 font-bold
                 mb-2
+                text-left
               "
               for="grid-password"
             >
