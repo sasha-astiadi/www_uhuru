@@ -4,7 +4,7 @@ title: Switch on your
 subtitle: Autonomous Community
 sourceUrl: '#connectivity'
 btnTxt: Learn more
-image: home-hand.jpg # src/assets/brandPanel/..
+image: uhuru_header.png # src/assets/brandPanel/..
 subImg: switcher-img.png
 subImg2: title_animation.gif
 ---

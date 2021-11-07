@@ -23,7 +23,7 @@
           <a href="/">
             <g-image
               :src="require(`!!assets-loader!@images/logo.png`)"
-              class="h-8 w-24"
+              class="w-32"
               alt=""
             />
 

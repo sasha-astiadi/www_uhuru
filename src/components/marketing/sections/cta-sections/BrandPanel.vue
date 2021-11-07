@@ -3,10 +3,10 @@
     <!-- home -->
     <div
       v-if="id == 'home' && brand1 && !brand2 && !brand3 && !brand4"
-      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg mt-20"
+      class="flex flex-wrap lg:text-left text-center py-4 mt-20 lg:px-20 bg "
     >
-      <div class="lg:w-1/2 lg:px-2 order-1 lg:order-none lg:self-center">
-        <g-image
+      <div class="lg:w-5/12 lg:px-10 px-4 order-1 lg:order-none lg:self-center ">
+        <g-image class="mx-auto lg:ml-0"
           :src="require(`!!assets-loader!@images/brandPanel/${brand.subImg}`)"
         />
         <div>
@@ -19,9 +19,9 @@
             :src="
               require(`!!assets-loader!@images/brandPanel/${brand.subImg2}`)
             "
-            class="w-full"
+            class="w-auto"
           />
-          <div class="my-10 lg:my-36">
+          <div class="my-10 lg:my-20">
             <a
               v-if="brand.btnTxt.includes('http')"
               target="_blank"
@@ -73,7 +73,7 @@
           ></div>
         </div>
       </div>
-      <div class="lg:w-1/2 lg:px-6 self-center">
+      <div class="lg:w-7/12 lg:px-6 self-center">
         <g-image class="w-full mx-auto" :src="image" :alt="brand.title" />
       </div>
     </div>

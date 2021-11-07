@@ -19,7 +19,7 @@
           {{ main.title }}
         </h3>
         <h2
-          class="h2 pb-6 lg:text-8xl leading-tight font-thin text-white"
+          class="h2 pb-6 lg:text-7xl leading-tight font-thin text-white"
           v-html="main.content"
         ></h2>
       </div>
