@@ -5,4 +5,4 @@ id: timeline2
 
 <br />
 
-**Download now and unlock economic affluence**
+### Download now and unlock economic affluence

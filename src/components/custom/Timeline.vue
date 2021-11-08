@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto lg:p-40 bg">
+  <div class="mx-auto lg:p-40 px-3 bg">
     <div class="grid grid-cols-1 md:grid-cols-12 text-gray-50">
       <div class="md:contents" v-for="(item, id) in timeline" :key="id">
         <div class="col-start-1 mr-10 md:mx-auto relative">
@@ -12,7 +12,7 @@
               h-3
               absolute
               top-1/4
-              -mt-3
+              -mt-8
               rounded-full
               bg-white
               text-center
@@ -24,15 +24,14 @@
         <div
           class="
             bg-transparent
-            col-start-2 col-end-6
-            p-4
+            col-start-2 col-end-7
+            p-3
             rounded-xl
-            my-4
             mr-auto
             w-full
           "
         >
-          <div class="font-normal text-xl mb-1" v-html="item.content"></div>
+          <div class="font-normal text-2xl leading-tight" v-html="item.content"></div>
         </div>
       </div>
 

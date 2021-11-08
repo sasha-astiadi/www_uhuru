@@ -1,17 +1,17 @@
 <template>
   <div
-    class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-40 bg"
+    class="flex flex-wrap lg:text-left text-center lg:py-20 py-10 lg:px-32 px-4 bg"
     id="join"
   >
-    <div class="lg:w-1/2 lg:px-20 order-1 lg:order-none lg:self-center">
-      <h2 class="text-8xl leading-none font-thin text-white">
+    <div class="lg:w-1/2 order-1 lg:order-none lg:self-center">
+      <h2 class="text-7xl leading-none font-thin text-white lg:mx-20 max-w-xl">
         <span class="block">{{ contact.title }}</span>
         <span class="block green" v-if="contact.subtitle">{{
           contact.subtitle
         }}</span>
       </h2>
     </div>
-    <div class="lg:w-1/2 lg:px-6 self-center">
+    <div class="lg:w-1/2 order-2 lg:px-20 self-center">
       <form class="w-full max-w-lg py-12">
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full px-3 mb-6 md:mb-0">

@@ -4,7 +4,7 @@
     id="benefits"
     :style="{ 'background-image': 'url(' + main.background.src + ')' }"
   >
-    <div class="flex flex-wrap lg:text-left text-center lg:px-40">
+    <div class="flex flex-wrap lg:text-left text-center px-3 lg:px-40">
       <div
         class="
           lg:w-2/3 lg:px-2

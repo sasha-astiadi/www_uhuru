@@ -83,14 +83,14 @@
     <div
       v-else-if="id == 'home' && brand2"
       id="connectivity"
-      class="flex flex-wrap lg:text-left text-center lg:py-20 lg:px-16 bg2"
+      class="flex flex-wrap lg:text-left text-center px-3 lg:py-20 lg:px-20 bg3"
     >
-      <div class="lg:w-1/2 self-center">
+      <div class="lg:w-7/12 self-center">
         <g-image class="mx-auto" :src="image" :alt="brand.title" />
       </div>
-      <div class="lg:w-1/2 lg:px-32 order-1 lg:order-none lg:self-center">
+      <div class="lg:w-5/12 lg:px-32 order-1 lg:order-none lg:self-center">
         <div class="text-white max-w-xl">
-          <h3 class="leading-none font-heading font-medium">
+          <h3 class="text-2xl leading-8 font-heading font-medium">
             {{ brand.title }}
           </h3>
           <p class="font-light text-2xl leading-tight mb-5">
@@ -137,14 +137,14 @@
             >
           </div>
 
-          <h3 class="leading-none font-heading font-medium">
+          <h3 class="text-2xl leading-8 font-heading font-medium">
             {{ brand.title2 }}
           </h3>
           <div
             class="pb-6 leading-tight tracking-wide font-light text-2xl mb-5"
             v-html="brand.content"
           ></div>
-          <h3 class="leading-none font-heading font-medium">
+          <h3 class="text-2xl leading-8 font-heading font-medium">
             {{ brand.title3 }}
           </h3>
         </div>
@@ -154,11 +154,11 @@
     <div
       v-else-if="id == 'home' && brand3"
       id="web"
-      class="flex flex-wrap lg:text-left text-center lg:py-32 lg:px-40 bg"
+      class="flex flex-wrap lg:text-left text-center lg:py-32 px-3 py-20 lg:px-40 bg"
     >
       <div class="lg:w-1/3 lg:px-2 order-1 lg:order-none lg:self-center">
         <div class="">
-          <h3 class="leading-none font-heading font-bold green">
+          <h3 class="text-2xl leading-none font-heading font-bold green">
             {{ brand.title }}
           </h3>
 
@@ -195,18 +195,18 @@
     <div
       v-else-if="id == 'home' && brand4"
       id="uhuru"
-      class="flex flex-wrap lg:text-left text-center lg:px-16 bg2"
+      class="flex flex-wrap lg:text-left text-center lg:px-16 px-3 bg2"
     >
       <div class="lg:w-1/2 lg:px-6 self-center">
         <g-image class="w-3/4 mx-auto mt-32" :src="image" :alt="brand.title" />
       </div>
       <div class="lg:w-1/2 lg:px-10 order-1 lg:order-none lg:self-center">
         <div class="text-white">
-          <h3 class="text-3xl leading-none font-heading font-bold">
+          <h3 class="text-2xl leading-none font-heading font-bold">
             {{ brand.title }}
           </h3>
 
-          <h2 class="h2 text-8xl leading-none font-heading font-thin">
+          <h2 class="h2 text-7xl leading-none font-heading font-thin">
             {{ brand.subtitle }}
           </h2>
           <div
@@ -244,7 +244,7 @@
           v-for="sec in sections"
           :key="sec.id"
         >
-          <h3 class="leading-none font-heading font-normal">
+          <h3 class="leading-none font-heading font-bold">
             <font-awesome :icon="['fas', 'angle-double-right']" class="mr-2" />
             {{ sec.title }}
           </h3>
@@ -363,6 +363,12 @@ export default {
   background: #121214;
   background: -webkit-linear-gradient(to right, #121214, #313035);
   background: linear-gradient(to right, #121214, #313035);
+}
+
+.bg3 {
+  background: #121214;
+  background: -webkit-linear-gradient(to left, #121214, #313035);
+  background: linear-gradient(to left, #1a1919, #1e1e20);
 }
 
 @keyframes typing {

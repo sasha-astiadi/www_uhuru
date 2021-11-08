@@ -5,4 +5,4 @@ id: timeline3
 
 <br />
 
-**Get your Uhuru Digital Self and join now**
+### Get your Uhuru Digital Self and join now

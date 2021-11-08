@@ -7,7 +7,7 @@ title2: It’s an unbalanced ecosystem, but we can fix that
 title3: Uhuru is, on the other hand, a much more balanced ecosystem
 sourceUrl: /stats
 btnTxt: View Stats
-image: uhuru_screen.png # src/assets/brandPanel/..
+image: uhuru_screen2.png # src/assets/brandPanel/..
 ---
 
 Uhuru is a convenient ecosystem on top of a resilient internet grid. We bring you a new internet with a set of productivity tools so you can enhance collaboration within your country, your company, your community
