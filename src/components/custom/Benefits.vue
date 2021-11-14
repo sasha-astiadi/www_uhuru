@@ -51,7 +51,6 @@
               :href="main.link"
               class="
                 bg-transparent
-                hover:bg-green-400
                 text-white
                 font-extrabold
                 hover:text-white
@@ -69,7 +68,6 @@
               :href="main.link"
               class="
                 bg-transparent
-                hover:bg-green-400
                 text-white
                 font-extrabold
                 hover:text-white
@@ -94,3 +92,8 @@ export default {
   props: ["benefits", "id", "main"],
 };
 </script>
+<style scoped>
+a:hover {
+  background-color: #75ecd4;
+}
+</style>

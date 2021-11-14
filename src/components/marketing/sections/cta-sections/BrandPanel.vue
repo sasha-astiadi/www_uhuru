@@ -19,7 +19,7 @@
             :src="
               require(`!!assets-loader!@images/brandPanel/${brand.subImg2}`)
             "
-            class="w-auto"
+            class="gif_image"
           />
           <div class="my-10 lg:my-20">
             <a
@@ -28,7 +28,7 @@
               :href="brand.sourceUrl"
               class="
                 bg-transparent
-                hover:bg-green-400
+                
                 text-white
                 font-extrabold
                 hover:text-white
@@ -46,7 +46,7 @@
               :href="brand.sourceUrl"
               class="
                 bg-transparent
-                hover:bg-green-400
+                
                 text-white
                 font-extrabold
                 hover:text-white
@@ -344,6 +344,7 @@ export default {
   display: inline-block;
 }
 
+
 .typewriter-text {
   display: inline-block;
   overflow: hidden;
@@ -369,6 +370,10 @@ export default {
   background: #121214;
   background: -webkit-linear-gradient(to left, #121214, #313035);
   background: linear-gradient(to left, #1a1919, #1e1e20);
+}
+
+a:hover {
+  background-color: #75ecd4;
 }
 
 @keyframes typing {
