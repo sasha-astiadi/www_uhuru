@@ -2,27 +2,27 @@
 id: navigation
 navLinks:
   - name: You & The Internt
-    link: '#connectivity'
+    link: ./#connectivity
     external: false
     expandable: false
 
   - name: Web 4.0
-    link: '#web'
+    link: ./#web
     external: false
     expandable: false
 
   - name: Uhuru
-    link: '#uhuru'
+    link: ./#uhuru
     external: false
     expandable: false
 
   - name: Benefits
-    link: '#benefits'
+    link: ./#benefits
     external: false
     expandable: false
 
   - name: Join
-    link: '#join'
+    link: ./#join
     external: false
     expandable: false
 
