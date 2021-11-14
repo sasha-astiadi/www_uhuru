@@ -83,12 +83,12 @@
     <div
       v-else-if="id == 'home' && brand2"
       id="connectivity"
-      class="flex flex-wrap lg:text-left text-center px-3 lg:py-20 lg:px-20 bg3"
+      class="flex flex-wrap lg:text-left text-center px-3 lg:py-20 lg:px-10 bg3"
     >
       <div class="lg:w-7/12 self-center">
         <g-image class="mx-auto" :src="image" :alt="brand.title" />
       </div>
-      <div class="lg:w-5/12 lg:px-32 order-1 lg:order-none lg:self-center">
+      <div class="lg:w-5/12 lg:px-10 order-1 lg:order-none lg:self-center">
         <div class="text-white max-w-xl">
           <h3 class="text-2xl leading-8 font-heading font-medium">
             {{ brand.title }}

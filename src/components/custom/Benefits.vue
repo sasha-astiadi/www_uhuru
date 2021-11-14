@@ -23,7 +23,7 @@
           v-html="main.content"
         ></h2>
       </div>
-      <div class="lg:w-1/3 lg:px-20 order-2 lg:order-none lg:self-end">
+      <div class="lg:w-1/3 lg:px-10 order-2 lg:order-none lg:self-end">
         <dl
           class="
             space-y-8

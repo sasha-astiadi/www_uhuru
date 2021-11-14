@@ -1,6 +1,15 @@
 <template>
   <div
-    class="flex flex-wrap lg:text-left text-center lg:py-20 py-10 lg:px-32 px-4 bg"
+    class="
+      flex flex-wrap
+      lg:text-left
+      text-center
+      lg:py-20
+      py-10
+      lg:px-32
+      px-4
+      bg
+    "
     id="join"
   >
     <div class="lg:w-1/2 order-1 lg:order-none lg:self-center">
@@ -35,8 +44,8 @@
                 appearance-none
                 block
                 w-full
-                bg-transparent
-                text-gray-400
+                myform
+                text-black
                 border border-gray-500
                 rounded-full
                 py-3
@@ -72,8 +81,7 @@
                 appearance-none
                 block
                 w-full
-                bg-transparent
-                text-gray-400
+                myform
                 border border-gray-500
                 rounded-full
                 py-3
@@ -111,8 +119,7 @@
                 appearance-none
                 block
                 w-full
-                bg-transparent
-                text-gray-400
+                myform
                 border border-gray-500
                 rounded-full
                 py-3
@@ -150,8 +157,7 @@
                 appearance-none
                 block
                 w-full
-                bg-transparent
-                text-gray-400
+                myform
                 border border-gray-500
                 rounded-lg
                 py-3
@@ -215,5 +221,15 @@ export default {
   background: #121214;
   background: -webkit-linear-gradient(to right, #121214, #313035);
   background: linear-gradient(to right, #121214, #313035);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+.myform {
+  background-color: #75ecd4;
 }
 </style>

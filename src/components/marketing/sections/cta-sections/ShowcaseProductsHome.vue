@@ -12,7 +12,7 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-5 lg:px-40">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-5 lg:px-20">
       <a
         v-for="(product, idx) in products"
         target="_blank"
