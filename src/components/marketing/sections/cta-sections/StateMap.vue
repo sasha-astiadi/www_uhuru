@@ -194,7 +194,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 
 export default {
   props: ["section"],
@@ -210,26 +210,26 @@ export default {
       return image;
     },
   },
-  async mounted() {
-    try {
-      const getFarms = await axios.get(
-        "https://explorer.threefold.io/api/farms?network=all"
-      );
-      const results = await axios.get(
-        "https://explorer.threefold.io/api/stats"
-      );
-      let farms = getFarms.data.length;
-      let hru = (results.data.hru / 1000).toFixed();
-      let cru = results.data.cru.toFixed();
-      this.stats.push(
-        { farms: farms },
-        { "Storage TB": hru },
-        { "Compute Cores": cru }
-      );
-    } catch (error) {
-      console.log(error);
-    }
-  },
+  // async mounted() {
+  //   try {
+  //     const getFarms = await axios.get(
+  //       "https://explorer.threefold.io/api/farms?network=all"
+  //     );
+  //     const results = await axios.get(
+  //       "https://explorer.threefold.io/api/stats"
+  //     );
+  //     let farms = getFarms.data.length;
+  //     let hru = (results.data.hru / 1000).toFixed();
+  //     let cru = results.data.cru.toFixed();
+  //     this.stats.push(
+  //       { farms: farms },
+  //       { "Storage TB": hru },
+  //       { "Compute Cores": cru }
+  //     );
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // },
 };
 </script>
 

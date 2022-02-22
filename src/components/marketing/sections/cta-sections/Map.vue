@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 
 export default {
   props: ["section"],
@@ -110,33 +110,33 @@ export default {
       return image;
     },
   },
-  async mounted() {
-    try {
-      // const getFarms = await axios.get(
-      //   "https://explorer.threefold.io/api/farms?network=all"
-      // );
-      const results = await axios.get(
-        "https://explorer.threefold.io/api/stats"
-      );
-      // let farms = getFarms.data.length;
-      let nodes = results.data.onlinenodes;
-      let hru = parseInt(results.data.hru);
-      let sru = parseInt(results.data.sru) / 1000; // To TB
-      let capacity = (hru + sru)
-        .toFixed()
-        .slice(0, 4)
-        .toString()
-        .replace(/\B(?=(\d{2})+(?!\d))/g, ",");
-      let cores = results.data.cru
-        .toFixed()
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      let countries = results.data.countries;
-      this.stats.push(capacity, nodes, cores, countries);
-    } catch (error) {
-      console.log(error);
-    }
-  },
+  // async mounted() {
+  //   try {
+  //     const getFarms = await axios.get(
+  //       "https://explorer.threefold.io/api/farms?network=all"
+  //     );
+  //     const results = await axios.get(
+  //       "https://explorer.threefold.io/api/stats"
+  //     );
+  //     let farms = getFarms.data.length;
+  //     let nodes = results.data.onlinenodes;
+  //     let hru = parseInt(results.data.hru);
+  //     let sru = parseInt(results.data.sru) / 1000; // To TB
+  //     let capacity = (hru + sru)
+  //       .toFixed()
+  //       .slice(0, 4)
+  //       .toString()
+  //       .replace(/\B(?=(\d{2})+(?!\d))/g, ",");
+  //     let cores = results.data.cru
+  //       .toFixed()
+  //       .toString()
+  //       .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  //     let countries = results.data.countries;
+  //     this.stats.push(capacity, nodes, cores, countries);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // },
 };
 </script>
 
